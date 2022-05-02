@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Prova</title>
+    <link rel="stylesheet" href="styleCriarProva.css"/>
+</head>
+<body>
+    <form>
+    <div class="barra1"></div>
+
+    <div class="head">
+        <div><p class="titulo"><img src="./imagem/circulo.png"> Criar Prova </img></p>
+        </div>
+
+        <div><p class="tipoProva">*Tipo de Prova</p>
+        </div>
+<!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
+        <div>
+            <p class="escolher_prova">
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+            <option hidden disabled selected value>Selecione</option>
+            <option value="Estrada">Estrada</option>
+            <option value="Pista">Pista</option>
+            <option value="Montanha">Montanha</option>
+            <option value="BMX">BMX</option>
+            </select>
+            </p>
+        </div>
+    </div>
+
+    <div class="barra2"></div>
+
+    <!-- Parte do nome, localidade e distancia-->
+    <div class="NLD">
+        <div class="nome"> 
+           <label  for="fname">*Nome</label>
+            <input class="nome1" type="text" id="fname" name="fname" required/>
+            
+        </div>
+
+        <div class="localidade"> 
+            <label  for="fname">*Localidade</label>
+            <input class="localidade1" type="text" id="fname" name="fname" required/>
+        </div>
+
+        <div> 
+            <p class="distancia"> *Distância:</p>
+        </div>
+        <div> 
+            <input class="distancia1" type="number" min="0" id="fname" name="fname" required/>
+            <label class="km">km</label>
+        </div>
+    </div>
+
+<!-- Parte da Data e tempo previsto -->
+    <div class="DT">
+            <div>
+                <p class="data">*Data: </p>
+            </div>
+            <div> 
+                <input class="data1" type="date" id="fname" name="fname" required/>
+            </div>
+            <div> 
+                <p class="tempo">*Tempo previsto: </p>
+            </div>
+            <div> 
+                <input class="tempo1" type="time" id="fname" name="fname" required/> 
+                <label class="h">h</label>   
+            </div>
+        
+    </div>
+
+    <!-- Parte do Incio -->
+    <div> 
+        <p class="inicio">*Inicio:</p>
+
+        <div> 
+            <input class="tempo2" type="time" id="fname" name="fname" required/> 
+            <label class="hincio">h</label>   
+        </div>
+    </div>
+<!-- Parte da descrição -->
+    <div> 
+        <div class="descricao"> 
+            <label  for="fname">Descrição:</label>
+             <input class="descricao2" type="text" id="fname" name="fname"/>
+         </div>
+    </div>
+
+<!-- Parte para enviar convites -->
+    <div>
+        <p class="convite" >Enviar convites para:</p>
+        <div > 
+           <div class="conviteEquipa"> 
+                <input type="checkbox" id="one" /> Equipas</label>
+            </div>
+            <div class="conviteAtleta">
+                <input type="checkbox" id="two" /> Atletas</label>
+            </div>
+        </div>
+    </div>
+
+<!-- Botao criar  -->
+
+    <div>
+        <button class="criar" >
+            Criar
+        </button>
+
+    </div>
+    </form>
+
+    <script src="scriptCriarProva.js"></script>
+</body>
+</html>
