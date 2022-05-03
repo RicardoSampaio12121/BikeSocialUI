@@ -74,6 +74,19 @@ h1 {
     margin-bottom: 0px;
 }
 
+.erro{
+    padding-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: red;
+}
+
+.escondido{ display: none; }
+
+#erro-pass{
+    margin-bottom: 10px;
+}
+
 button{
     display: block;
     margin-left: auto;
