@@ -60,7 +60,11 @@ document.querySelector("button").addEventListener("click", function()
             if (inputTipoUser.value == "Diretor") window.location.href = "maisumpassoDiretor.html";
             else if (inputTipoUser.value == "Funcionário") window.location.href = "maisumpassoFuncionario.html";
             else if (inputTipoUser.value == "Treinador") window.location.href = "maisumpassoTreinador.html";
-            else alert("Conta criada com sucesso!");
+            else 
+            {
+                alert("Conta criada com sucesso!");
+                window.location.href = "../login/login.html";
+            }
         }
     }
 });
