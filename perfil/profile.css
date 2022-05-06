@@ -4,23 +4,55 @@
     flex-direction: row;
     margin-right: 50px;
     margin-left: 50px;
-    justify-content: space-between;
+    margin-top: 20px;
+    justify-content: space-around;
 }
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.round-profile-picture {
+    height: 125px;
+    width: 125px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+  }
 
 .leftSpace
 {
     margin-left: 50px;
-    align-self: flex-start;  
+}
+
+.leftSpace > *
+{
+    margin-bottom: 20px;
 }
 
 .mainContent
 {
     align-self: center;
+    max-width: 30rem;
+    min-width: 30rem;
 }
+
+.mainContent > *
+{
+    margin-bottom: 20px;
+}
+
 .rightSpace
 {
     margin-right: 50px;
-    align-self: flex-end;
+}
+
+.rightSpace > *
+{
+    margin-bottom: 20px;
 }
 
 /* TODO : Melhorar responsiveness */
