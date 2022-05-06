@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("#includeContent").load("../common/header.html");
+            $("#includeSideBar").load("../common/definitionsSideBar.html")
+        });
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../common/header.html" rel="import" />
+    <link rel="stylesheet" href="profile.css"/>
+</head>
+<body>
+    <div id="includeContent"></div>
+    <div class="wrapper">
+        <div class="leftSpace">
+            <div class="card" style="width: 18rem;">
+                <img src="../Imagens/background.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr>
+                    <div class="bottomSide">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p> Left side </p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="mainContent">
+            <div class="card" style="width: 18rem;">
+                <img src="../Imagens/background.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr>
+                    <div class="bottomSide">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p> Center </p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="rightSpace">
+            <div class="card" style="width: 18rem;">
+                <img src="../Imagens/background.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr>
+                    <div class="bottomSide">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p> Right Side </p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>      
+</body>
+</html>
