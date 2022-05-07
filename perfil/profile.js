@@ -7,7 +7,7 @@ submitPostBtn.addEventListener('click', event => {
     let postTextAreaText = postTextArea.value;
     let htmlToInject = "<div class='card'>\
         <h5 class='card-title card-body' style='padding-bottom: 0px;'>José Seila postou</h5>\
-        <hr>\
+        <hr style='margin-bottom: 0px;'>\
         <div class='card-body'>\
             <p class='card-text' id='post-content'>" + postTextAreaText + "</p>\
         </div>\
