@@ -280,21 +280,21 @@ a:hover {
 }
 
 .logo {
-position: absolute;
-width: 738px;
-height: 78px;
-left: 14px;
-top: 0px;
+    position: absolute;
+    width: 738px;
+    height: 78px;
+    left: 14px;
+    top: 0px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 50px;
-line-height: 59px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
 
-color: #000000;
+    color: #000000;
 }
 
 nav {
@@ -333,80 +333,80 @@ main {
 }
 
 .filtros{
-position: absolute;
-width: 151px;
-height: 30px;
-left: 57px;
-top: 150px;
+    position: absolute;
+    width: 151px;
+    height: 30px;
+    left: 57px;
+    top: 150px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-line-height: 35px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
 
-color: #000000;
+    color: #000000;
 }
 
 .Retangulo-filtros{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-width: 572px;
-height: 113px;
-left: 49px;
-top: 179px;
+    position: absolute;
+    width: 572px;
+    height: 113px;
+    left: 49px;
+    top: 179px;
 
-background: #E5E5E5;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #E5E5E5;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .tipo-prova{
-position:fixed;
-width: 125px;
-height: 46px;
-left: 71px;
-top: 188px;  
+    position:fixed;
+    width: 125px;
+    height: 46px;
+    left: 71px;
+    top: 188px;  
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
 
-color: #000000;
+    color: #000000;
 }
 
 .escolher-prova{
-box-sizing: border-box;
-position: fixed;
-width: 188px;
-height: 32px;
-left: 64px;
-top: 234px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 64px;
+    top: 234px;
 }
 
 .escolha{
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 20px;
-text-align: auto;
-width: 200px;
-height: 30px;
-right: 5px;
-left: 5px;
-background: #FFFFFF;
-border: 2px solid #000000;
-box-sizing: border-box;
-border-radius: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: auto;
+    width: 200px;
+    height: 30px;
+    right: 5px;
+    left: 5px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .localidade1{
@@ -429,99 +429,99 @@ border-radius: 10px;
 }
 
 .Retangulo-localidade{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 367px;
-top: 234px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 367px;
+    top: 234px;
 
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .escrever-localidade{
-position: fixed;
-width: 188px;
-height: 32px;
-left: 367px;
-top: 234px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 367px;
+    top: 234px;
 
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 
 }
 
 .provas-disponíveis{
     position: absolute;
-width: 253px;
-height: 46px;
-left: 124.02px;
-top: 295px;
+    width: 253px;
+    height: 46px;
+    left: 124.02px;
+    top: 295px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
 
-color: #0397B5;
+    color: #0397B5;
 }
 
 .tabela{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-width: 643px;
-height: 210px;
-left: 124.02px;
-top: 335px;
+    position: absolute;
+    width: 643px;
+    height: 210px;
+    left: 124.02px;
+    top: 335px;
 
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .dados{
-position: absolute;
-width: 113px;
-height: 30px;
-left: 63px;
-top: 575px;
+    position: absolute;
+    width: 113px;
+    height: 30px;
+    left: 63px;
+    top: 575px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-line-height: 35px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
 
-color: #000000;
+    color: #000000;
 }
 
 .retangulo-dados{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-width: 856px;
-height: 240px;
-left: 49px;
-top: 605px;
+    position: absolute;
+    width: 856px;
+    height: 240px;
+    left: 49px;
+    top: 605px;
 
-background: #E5E5E5;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #E5E5E5;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .nome{
@@ -557,191 +557,281 @@ border-radius: 10px;
     border-radius: 10px;
 }
 
+.escrever-nome{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 78px;
+    top: 656px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
+}
+
 .apelido{
-position: fixed;
-width: 72px;
-height: 46px;
-left: 402px;
-top: 610px;
-    
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
-    
-color: #000000;    
+    position: fixed;
+    width: 72px;
+    height: 46px;
+    left: 402px;
+    top: 610px;
+        
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+        
+    color: #000000;    
 }
 
 .retangulo-apelido{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 402px;
-top: 656px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 402px;
+    top: 656px;
+        
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.escrever-apelido{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 402px;
+    top: 656px;
     
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
 }
 
 .nome-do-clube{
-position: fixed;
-width: 148px;
-height: 46px;
-left: 672px;
-top: 610px;
-    
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
-    
-color: #000000; 
+    position: fixed;
+    width: 148px;
+    height: 46px;
+    left: 672px;
+    top: 610px;
+        
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+        
+    color: #000000; 
 }
 
 .retangulo-nome-clube{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 672px;
-top: 656px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 672px;
+    top: 656px;
+        
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.escrever-retangulo-nome-clube{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 672px;
+    top: 656px;
     
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
 }
 
 .localidade{
-position: fixed;
-width: 188px;
-height: 46px;
-left: 78px;
-top: 714px;
+    position: fixed;
+    width: 188px;
+    height: 46px;
+    left: 78px;
+    top: 714px;
     
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
     
-color: #000000;
+    color: #000000;
 }
 
 .retangulo-localidade{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 78px;
-top: 760px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 78px;
+    top: 760px;
     
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.escrever-retangulo-localidade{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 78px;
+    top: 760px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
 }
 
 .n-telemovel{
-position: fixed;
-width: 188px;
-height: 46px;
-left: 402px;
-top: 714px;
+    position: fixed;
+    width: 188px;
+    height: 46px;
+    left: 402px;
+    top: 714px;
     
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
     
-color: #000000;
+    color: #000000;
 }
 
 .retangulo-telemovel{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 402px;
-top: 760px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 402px;
+    top: 760px;
     
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.escrever-retangulo-telemovel{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 402px;
+    top: 760px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
 }
 
 .n-do-clube{
-position: fixed;
-width: 148px;
-height: 46px;
-left: 672px;
-top: 713px;
+    position: fixed;
+    width: 148px;
+    height: 46px;
+    left: 672px;
+    top: 713px;
     
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-display: flex;
-align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
     
-color: #000000;
+    color: #000000;
 }
 
 .retangulo-num-club{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: fixed;
-width: 188px;
-height: 32px;
-left: 672px;
-top: 759px;
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 672px;
+    top: 759px;
     
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.escrever-retangulo-num-club{
+    position: fixed;
+    width: 188px;
+    height: 32px;
+    left: 672px;
+    top: 759px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-sizing: border-box; 
 }
 
 .retangulo-inscrever{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-width: 423px;
-height: 72px;
-left: 473px;
-top: 937px;
+    position: absolute;
+    width: 423px;
+    height: 72px;
+    left: 473px;
+    top: 937px;
     
-background: #CCF7FF;
-border: 4px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+    background: #CCF7FF;
+    border: 4px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .inscrever{
     position: fixed;
     width: 378px;
     height: 38px;
-    left: 494px;
+    left: 540px;
     top: 955px;
     
     font-family: 'Roboto';
@@ -790,69 +880,69 @@ border-radius: 10px;
 }
 
 .linha{
-position: absolute;
-width: 398px;
-height: 0px;
-left: 783px;
-top: 375px;
+    position: absolute;
+    width: 398px;
+    height: 0px;
+    left: 783px;
+    top: 375px;
     
-border: 1px solid #000000;
+    border: 1px solid #000000;
 }
 
 .quadrado1{
-box-sizing: border-box;
+    box-sizing: border-box;
 
-position: absolute;
-width: 30px;
-height: 30px;
-left: 785px;
-top: 385px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 785px;
+    top: 385px;
     
-background: #FFFFFF;
-border: 3px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .quadrado2{
-box-sizing: border-box;
+    box-sizing: border-box;
     
-position: absolute;
-width: 30px;
-height: 30px;
-left: 785px;
-top: 425px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 785px;
+    top: 425px;
         
-background: #FFFFFF;
-border: 3px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .quadrado3{
-box-sizing: border-box;
+    box-sizing: border-box;
         
-position: absolute;
-width: 30px;
-height: 30px;
-left: 785px;
-top: 465px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 785px;
+    top: 465px;
             
-background: #FFFFFF;
-border: 3px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .quadrado4{
-box-sizing: border-box;
+    box-sizing: border-box;
             
-position: absolute;
-width: 30px;
-height: 30px;
-left: 785px;
-top: 510px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 785px;
+    top: 510px;
                 
-background: #FFFFFF;
-border: 3px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .barra{
@@ -886,3 +976,5 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
     color: #000000;
 }
+
+
