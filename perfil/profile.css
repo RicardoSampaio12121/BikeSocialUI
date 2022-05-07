@@ -35,7 +35,6 @@
 
 .mainContent
 {
-    align-self: center;
     max-width: 30rem;
     min-width: 30rem;
     min-height: 0;
@@ -91,7 +90,6 @@
     display: inline-block;
   }
 
-/* TODO : Melhorar responsiveness */
 @media only screen and (max-width: 1000px)
 {
     .wrapper
