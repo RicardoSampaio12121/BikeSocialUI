@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InscriçãoProvas</title>
+    <link rel = "stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid border myHeader">
+        <div class="row align-items-center">
+            <div class="col-4">
+                <h1>BikeSocial</h1>
+            </div>
+            <div class="col-4">
+                <input class="form-control searchBar" type="text" placeholder="Procurar no BikeSocial...">
+            </div>
+            <div class="col-4">Col3</div>
+        </div>
+    </div>
+
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+
+    <form>
+        <!-- Barra cinzenta inicial -->
+        <div class="barra_eventos">Eventos -> Provas -> Inscrição</div>
+        
+        <!-- Título Filtro: Tipo de Prova e Localidade -->
+        <div> <p class = "filtros">Filtros </p> </div>
+
+        <div class = "retangulo_filtros"></div>
+
+        <div><p class="tipoProva">Tipo de Prova</p> </div>
+
+        <div>
+            <p class="escolher_prova">
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required>
+                <option hidden disabled selected value>Selecione</option>
+                <option value="Estrada">Estrada</option>
+                <option value="Pista">Pista</option>
+                <option value="Montanha">Montanha</option>
+                <option value="BMX">BMX</option>
+            </select>
+            </p>
+        </div>
+
+        <div class="localidade"> 
+            <label  for="fname">Localidade</label>
+            <input class="localidade1" type="text" id="fname" name="fname" required>
+        </div>
+    </form>
+</body>
+</html>
