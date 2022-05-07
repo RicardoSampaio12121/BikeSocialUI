@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $("#includeContent").load("../common/header.html");
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+
+</head>
+
+<body>
+    <!-- <div class="bg-image" style="background-image: url('https://21127_joana_InscriçãoTreinos\background.jpg'); height: 100vh;"> -->
+
+    <div id="includeContent"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <h3>Eventos - Treino - Inscrição</h1>
+        </div>
+    </nav>
+
+    <div id="content">
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label class="filtros-title">Filtros</label>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div
+                class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12 column-backgroud-color border-top border-left border-right border-dark rounded-top">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-left border-dark">
+                <label class="tipo-prova-title">Tipo de treino</label>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-right border-dark">
+                <label class="tipo-prova-title">Localidade</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-left border-dark">
+                <select class="escolher-prova escolha escolha" id="prova" name="tipo_prova" placeholder="Selecione"
+                    required>
+                    <!-- required -->>
+                    <option hidden disabled selected value>Selecione</option>
+                    <option value="Estrada">Estrada</option>
+                    <option value="Pista">Pista</option>
+                    <option value="Montanha">Montanha</option>
+                    <option value="BMX">BMX</option>
+                </select>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-right border-dark">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div
+                class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12 column-backgroud-color border-bottom border-left border-right border-dark rounded-bottom">
+                <p></p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label class="provas-disponíveis">Treinos Disponíveis</label>
+            </div>
+        </div>
+
+
+        <table class="table table-light">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col-1">Treino</th>
+                    <th scope="col-1">Localidade</th>
+                    <th scope="col-1">Dia</th>
+                    <th scope="col-1">Hora</th>
+                    <th scope="col-1">Duração</th>
+                    <th scope="col-1">Distância</th>
+                    <th scope="col-1">Inscrever</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estrada</td>
+                    <td>Braga</td>
+                    <td>15/07</td>
+                    <td>14:00</td>
+                    <td>2 horas</td>
+                    <td>30 Km</td>
+                    <td><input type="checkbox"></td>
+
+                </tr>
+                <tr>
+                    <td>Pista</td>
+                    <td>Trofa</td>
+                    <td>20/06</td>
+                    <td>09:00</td>
+                    <td>1 horas</td>
+                    <td>23 Km</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Montanha</td>
+                    <td>Gerês</td>
+                    <td>20/10</td>
+                    <td>08:00</td>
+                    <td>4 horas</td>
+                    <td>50 Km</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>BMX</td>
+                    <td>Porto</td>
+                    <td>20/07</td>
+                    <td>09:00</td>
+                    <td>3 horas</td>
+                    <td>27 km</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label class="dados">Dados</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div
+                class="col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12 column-backgroud-color border-left border-right border-top border-dark rounded-top">
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
+                <label>Nome</label>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
+                <label>Apelido</label>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
+                <label>Nome do clube</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
+                <label>Localidade</label>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
+                <label>Nº de telemovel</label>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
+                <label>Nº do clube</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
+                <input class="escrever-localidade" type="text" required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div
+                class="col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12 column-backgroud-color border-bottom rounded-bottom border-bottom border-left border-right border-dark">
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- </div> -->
+
+
+
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+</body>
+
+</html>
