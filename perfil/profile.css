@@ -50,6 +50,7 @@
     margin-right: 50px;
     min-height: 0;
     min-width: 18rem;
+    max-width: 24rem;
     flex : 1;
 }
 
