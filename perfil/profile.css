@@ -1,0 +1,107 @@
+/* Feito por Nuno Lopes - 16552 */
+.wrapper
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.leftSpace
+{
+    margin-left: 50px;
+    max-width: 24rem;
+    min-width: 18rem;
+    min-height: 0;
+    flex: 1;
+}
+
+.leftSpace > *
+{
+    margin-bottom: 20px;
+}
+
+.mainContent
+{
+    align-self: center;
+    max-width: 30rem;
+    min-width: 30rem;
+    min-height: 0;
+}
+
+.mainContent > *
+{
+    margin-bottom: 20px;
+}
+
+.friend
+{
+    padding: 20px;
+    border-top: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-color: rgb(230, 222, 222);
+    border-style: solid;
+}
+
+.friend:hover
+{
+    background-color:rgb(230, 222, 222);
+}
+.rightSpace
+{
+    margin-right: 50px;
+    min-height: 0;
+    min-width: 18rem;
+    max-width: 24rem;
+    flex : 1;
+}
+
+.rightSpace > *
+{
+    margin-bottom: 20px;
+}
+
+/* TODO : Melhorar responsiveness */
+@media only screen and (max-width: 1000px)
+{
+    .wrapper
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+    .rightSpace
+    {
+        display: none;
+        margin-right: 0px;
+        align-self: baseline;
+    }
+    .leftSpace
+    {
+        margin-left: 0px;
+        min-width: 30rem;
+        max-width: 30rem;
+        align-self: baseline;
+    }
+    .mainContent
+    {
+        align-self: baseline;
+    }
+}
