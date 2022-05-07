@@ -45,6 +45,21 @@
     margin-bottom: 20px;
 }
 
+.friend
+{
+    padding: 20px;
+    border-top: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-color: rgb(230, 222, 222);
+    border-style: solid;
+}
+
+.friend:hover
+{
+    background-color:rgb(230, 222, 222);
+}
 .rightSpace
 {
     margin-right: 50px;
