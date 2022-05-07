@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InscriçãoProvas</title>
+    <link rel = "stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-fluid border myHeader">
+    <div class="row align-items-center">
+        <div class="col-4">
+            <h1>BikeSocial</h1>
+        </div>
+        <div class="col-4">
+            <input class="form-control searchBar" type="text" placeholder="Procurar no BikeSocial...">
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <header>
+          <div class = "barra"></div>
+          <div class = "eventos-provas-inscricao">Eventos  -   Provas   -   Inscrição</div>
+
+          <div class="filtros">Filtros</div>
+          <div class="Retangulo-filtros">
+
+            <div class="tipo-prova">
+              <label>Tipo de prova</label>
+            </div>
+            <!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
+            <div class="escolher-prova">
+                <select class="escolha" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+                <option hidden disabled selected value>Selecione</option>
+                <option value="Estrada">Estrada</option>
+                <option value="Pista">Pista</option>
+                <option value="Montanha">Montanha</option>
+                <option value="BMX">BMX</option>
+                </select>
+            </div>
+                
+            <div class="localidade1">Localidade</div>
+
+            <div class="Retangulo-localidade">
+              <input class="escrever-localidade" type="text" id="fname" name="fname" required/>
+            </div>
+
+          </div>
+
+          <div class="provas-disponíveis">Provas Disponíveis</div>
+
+          <!-- Tabela -->
+          
+            <table class="tabela" border="1" width="">
+              <tr>
+                <td>Tipo de Prova</td>
+                <td>Localidade</td>
+                <td>Dia</td>
+                <td>Hora</td>
+                <td>Duração</td>
+                <td>Distância</td>
+              </tr>
+
+              <tr>
+                <td>Estrada</td>
+                <td>Braga</td>
+                <td>15/07</td>
+                <td>14:00</td>
+                <td>2 horas</td>
+                <td>30 km</td>
+              </tr>
+
+              <tr>
+                <td>Pista</td>
+                <td>Trofa</td>
+                <td>20/06</td>
+                <td>09:00</td>
+                <td>1 hora</td>
+                <td>23 km</td>
+              </tr>
+
+              <tr>
+                <td>Montanha</td>
+                <td>Gerês</td>
+                <td>20/10</td>
+                <td>08:00</td>
+                <td>4 horas</td>
+                <td>50 km</td>
+              </tr>
+
+              <tr>
+                <td>BMX</td>
+                <td>Porto</td>
+                <td>20/07</td>
+                <td>09:00</td>
+                <td>3 horas</td>
+                <td>-- km</td>
+              </tr>
+            </table>
+
+          <div class="dados">Dados</div>
+
+          <div class="retangulo-dados">
+            <div class = "nome">Nome
+            </div>
+              <div class = "retangulo-nome">
+                <input class="escrever-nome" type="text" id="fname" name="fname" required/>
+              </div>
+            <div class = "apelido">Apelido</div>
+              <div class = "retangulo-apelido">
+                <input class="escrever-apelido" type="text" id="fname" name="fname" required/>
+              </div>
+            <div class = "nome-do-clube">Nome do Clube</div>
+              <div class = "retangulo-nome-clube">
+                <input class="escrever-retangulo-nome-clube" type="text" id="fname" name="fname" required/>
+              </div>
+            <div class = "localidade">Localidade</div>
+              <div class = "retangulo-localidade">
+                <input class="escrever-retangulo-localidade" type="text" id="fname" name="fname" required/>
+              </div>
+            <div class = "n-telemovel">Nº de Telemóvel</div>
+              <div class = "retangulo-telemovel">
+                <input class="escrever-retangulo-telemovel" type="text" id="fname" name="fname" required/>
+              </div>
+            <div class = "n-do-clube">Nª do Clube</div>
+              <div class = "retangulo-num-club">
+                <input class="escrever-retangulo-num-club" type="text" id="fname" name="fname" required/>
+              </div>
+            
+          </div>
+
+          <div class = "retangulo-inscrever">
+            <div class ="inscrever">INSCREVER</div>
+          </div>
+
+          <div class = "retangulo-selecionar"></div>
+          <div class = "provas-inscricao">Selecionar provas a se inscrever</div>
+          <div class = "linha"></div>
+          <div class = "quadrado1"></div>
+          <div class = "quadrado2"></div>
+          <div class = "quadrado3"></div>
+          <div class = "quadrado4"></div>
+          
+      </header>
+
+      <main>
+
+      </main>
+</body>
+</html>
