@@ -1,3 +1,4 @@
+/*Autor: 21133 Paula Rodrigues */
 * {
     margin: auto;
     padding: auto;
@@ -15,22 +16,17 @@
     font-family: sans-serif;
     position: relative;
     width: 1032px;
-    height: 815px;
-    
+    height: 815px;    
     background: #FFFFFF;
     mix-blend-mode: normal;
   }
 
 .barra1 {
-    /*position: center;*/
     width: 1019px;
     height: 24px;
     left: 5px;
     top: 50px;
-    /*align-self: center;*/
     margin-top: 10px;
-    /*margin-block-end: 0px;*/
-    
     background: #C6C7B3;
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -48,27 +44,17 @@
     
     font-family: 'Roboto';
     font-style: normal;
-    /*font-weight: 400;*/
     font-size: 28px;
-    /*line-height: 20px;
-    text-align: auto;*/
     color: #000000;
     text-transform: uppercase;
     margin-top: 20px;
 
 }
 
-.tipoTreino{
-    /*position: absolute;
-    width: 140px;
-    height: 21px;
-    left: 535px;*/
+.tipoProva{
     font-family: 'Radley';
-    /*font-style: normal;*/
     font-weight: 400;
     font-size: 22px;
-    /*line-height: 28px;
-    text-align: center;*/
     margin-top: 30px;
 }
 
@@ -77,14 +63,9 @@
     background-color: white;
 }
 
-.escolher_treino{
+.escolher_prova{
     position: absolute;
-    /*width: 500px;
-    height: 21px;*/
     left: 700px;
-    /*right: 10px;
-    border-top: 2px;
-    margin-top: 0px;*/
 }
 
 .scroll{
@@ -138,25 +119,17 @@
     left: 54px;
     bottom: 650px;
     height: 50px;
-    font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
 }
 
 .nome1{ 
     width: 250px;
     height: 35px;
-    left: 49.38px;
     background: #FFFFFF;
     border: 2px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     transform: rotate(0.51deg);
-
     font-size: 16px;
 }
 
@@ -166,18 +139,11 @@
     left: 338px;
     bottom: 588px;
     height: 110px;
-    font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
 }
 
 .localidade1{
     width: 250px;
     height: 35px;
-    left: 49.38px;
     background: #FFFFFF;
     border: 2px solid #000000;
     box-sizing: border-box;
@@ -193,12 +159,6 @@
     height: 110px;
     left: 635px;
     bottom: 567px;
-    font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
 }
 
 .distancia1{
@@ -221,46 +181,31 @@
     height: 60px;
     left: 830px;
     bottom: 615px;
-    font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
-    color: #000000;
 }
 
 .data{
     position: absolute;
-    width: 101px;
     height: 43px;
     left: 60px;
     bottom: 550px;
-
-    font-family: 'Radley';
-    font-style: normal;
+    font-family: 'Radley';    
     font-weight: 400;
     font-size: 22px;
-    line-height: 28px;
     color: rgba(0, 0, 0, 0.84);
   
 }
 
 .data1{
     position: absolute;
-    width: 120px;
     height: 30px;
     left: 130px;
     bottom: 560px;
-    font-weight: 500;
     color: rgba(0, 0, 0, 0.84);
     margin-top: 5px;
     border: 2px solid #070707;
     border-radius: 10px;
     font-family: 'Radley';
-    font-style: normal;
     font-size: 18px;
-    line-height: 20px;
 }
 
 .tempo{
@@ -269,26 +214,20 @@
     height: 21px;
     left: 358px;
     bottom: 570px;
-
     font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
-    line-height: 28px;
     text-align: center;
     color: rgba(0, 0, 0, 0.84);
 }
 
 .tempo1{
     position: absolute; 
-    width: 90px;
+    width: 100px;
     height: 43px;
     left: 543px;
     top: 295px;
-    padding: 0%;
     font-size: 16px;
     bottom: 630px;
-
     /* rectangulo a volta*/
     background: #FFFFFF;
     border: 2px solid #000000;
@@ -298,14 +237,10 @@
 
 .h{
     position: absolute;
-    width: 14px;
-    height: 28px;
     left: 650px;
     bottom: 560px;
-
     font-family: 'Radley';
     font-style: normal;
-    font-weight: 400;
     font-size: 22px;
     line-height: 28px;
     color: #000000;
@@ -313,13 +248,10 @@
 
 .inicio{
     position: absolute;
-    width: 82px;
     height: 41px;
     left: 61.15px;
     bottom: 480px;
     font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
     line-height: 28px;
     color: rgba(0, 0, 0, 0.84);
@@ -341,14 +273,10 @@
 
 .hincio{
     position: absolute;
-    width: 12px;
-    height: 26px;
     left: 230px;
     bottom: 490px;
-
     font-family: 'Radley';
     font-style: normal;
-    font-weight: 400;
     font-size: 22px;
     line-height: 28px;
 
