@@ -11,6 +11,8 @@ import { InvitesComponent } from './compoments/Trainings/invites/invites.compone
 import { AccountDefinitionsComponent } from './compoments/conta/account-definitions/account-definitions.component';
 import { PrivacyDefinitionsComponent } from './compoments/conta/privacy-definitions/privacy-definitions.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { FriendListEntryComponent } from './compoments/friend-list-entry/friend-list-entry.component';
+import { PostCardComponent } from './compoments/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProfileComponent } from './views/profile/profile.component';
     AccountDefinitionsComponent,
     PrivacyDefinitionsComponent,
     ProfileComponent,
+    FriendListEntryComponent,
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,

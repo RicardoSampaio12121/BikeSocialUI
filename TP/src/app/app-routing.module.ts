@@ -8,13 +8,17 @@ import { FooterComponent } from './compoments/templates/footer/footer.component'
 import { CreateComponent } from './compoments/Trainings/create/create.component';
 import { InvitesComponent } from './compoments/Trainings/invites/invites.component';
 import { HomeComponent } from './views/home/home.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 const routes: Routes = [{
   
     path: "",
     component: HomeComponent
   },
-
+  {
+    path: "profile",
+    component: ProfileComponent
+  },
   {
     path: "criartreino",
     component: CreateComponent
