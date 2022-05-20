@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './compoments/Trainings/create/create.component';
 import { FooterComponent } from './compoments/templates/footer/footer.component';
 import { NavComponent } from './compoments/templates/nav/nav.component';
-import { HomeComponent } from './compoments/views/home/home.component';
+import { HomeComponent } from './views/home/home.component';
 import { InvitesComponent } from './compoments/Trainings/invites/invites.component';
 import { AccountDefinitionsComponent } from './compoments/conta/account-definitions/account-definitions.component';
 import { PrivacyDefinitionsComponent } from './compoments/conta/privacy-definitions/privacy-definitions.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PrivacyDefinitionsComponent } from './compoments/conta/privacy-definiti
     InvitesComponent,
     AccountDefinitionsComponent,
     PrivacyDefinitionsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

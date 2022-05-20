@@ -7,7 +7,7 @@ import { InvitesComponentR } from './compoments/race/invites/invites.component';
 import { FooterComponent } from './compoments/templates/footer/footer.component';
 import { CreateComponent } from './compoments/Trainings/create/create.component';
 import { InvitesComponent } from './compoments/Trainings/invites/invites.component';
-import { HomeComponent } from './compoments/views/home/home.component';
+import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [{
   
