@@ -1,0 +1,445 @@
+/*Autor: 21133 Paula Rodrigues*/
+* {
+    margin: auto;
+    padding: auto;
+    border: 0px;
+  }
+
+  input:focus{
+    color: #FFFFFF;
+    background:#666866;
+    padding: 1px 10px;
+}
+  
+/*   body {
+    margin: auto;
+    font-family: sans-serif;
+    position: relative;
+    width: 1032px;
+    height: 815px;
+    
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+  } */
+
+.barra1 {
+    /*position: center;*/
+    width: 100%;
+    height: 24px;
+    left: 5px;
+    top: 50px;
+    /*align-self: center;*/
+    margin-top: 10px;
+    /*margin-block-end: 0px;*/
+    
+    background: #C6C7B3;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.simbolo_1{
+    position: relative;
+    border: 0.5px solid #90D279;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.titulo{
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    /*font-weight: 400;*/
+    font-size: 28px;
+    /*line-height: 20px;
+    text-align: auto;*/
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+}
+
+.tipoTreino{
+    /*position: relative;
+    width: 140px;
+    height: 21px;
+    left: 535px;*/
+    font-family: 'Radley';
+    /*font-style: normal;*/
+    font-weight: 400;
+    font-size: 22px;
+    /*line-height: 28px;
+    text-align: center;*/
+    margin-top: 30px;
+}
+
+.head{
+    display: flex;
+    background-color: white;
+}
+
+.escolher_treino{
+    /* position: relative; */
+    /*width: 500px;
+    height: 21px;*/
+    left: 700px;
+    /*right: 10px;
+    border-top: 2px;
+    margin-top: 0px;*/
+}
+
+.scroll{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: auto;
+    width: 200%;
+    height: 30px;
+    right: 5px;
+    left: 5px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.barra2 {
+    position: relative;
+    width: 964%;
+    height: 0px;
+    left: 28px;
+    margin-top: 5px;
+    border: 5px solid #BCD27B;
+    background-color: #BCD27B;
+    
+}
+
+.NLD{
+    padding-top: 10%;
+    width: 100%;
+    height: 21px;
+    left: 54px;
+    bottom: 601%;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center; 
+    margin: 0px;
+   
+}
+
+.nome{
+    position: relative;
+    width: 69%;/* 
+    left: 20px; */
+    bottom: 600%;
+    height: 50px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.nome1{ 
+    width: 25%;
+    height: 35px;
+    left: 49.38px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transform: rotate(0.51deg);
+
+    font-size: 16px;
+}
+
+.localidade{
+    position: relative;
+    width: 122%;
+    left: 338px;
+    bottom: 588%;
+    height: 110px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.localidade1{
+    width: 25%;
+    height: 35%;
+    left: 49.38%;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transform: rotate(0.51deg);
+}
+
+
+.distancia{
+    position: relative;
+    width: 0%;
+    height: 111px;
+    left: 63px;
+    bottom: 567%;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.distancia1{
+    position: relative;
+    width: 80px;
+    height: 38px;
+    left: 767px;
+    bottom: 640px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transform: rotate(0.51deg);
+}
+
+.km{
+    position: relative;
+    width: 77px;
+    height: 60px;
+    left: 830px;
+    bottom: 615px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+
+.data{
+    position: relative;
+    width: 101px;
+    height: 43px;
+    left: 60px;
+    bottom: 550px;
+
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.84);
+  
+}
+
+.data1{
+    position: relative;
+    width: 120px;
+    height: 30px;
+    left: 130px;
+    bottom: 560px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.84);
+    margin-top: 5px;
+    border: 2px solid #070707;
+    border-radius: 10px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.tempo{
+    position: relative;
+    width: 195px;
+    height: 21px;
+    left: 358px;
+    bottom: 570px;
+
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.tempo1{
+    position: relative; 
+    width: 90px;
+    height: 43px;
+    left: 543px;
+    top: 295px;
+    padding: 0%;
+    font-size: 16px;
+    bottom: 630px;
+
+    /* rectangulo a volta*/
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.h{
+    position: relative;
+    width: 14px;
+    height: 28px;
+    left: 650px;
+    bottom: 560px;
+
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.inicio{
+    position: relative;
+    width: 82px;
+    height: 41px;
+    left: 61.15px;
+    bottom: 480px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.84);
+
+}
+
+.tempo2{
+    position: relative;
+    height: 43px;
+    left: 132.21px;
+    bottom: 480px;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.hincio{
+    position: relative;
+    width: 12px;
+    height: 26px;
+    left: 230px;
+    bottom: 490px;
+
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+
+.descricao{
+    position: relative;
+    width: 96px;
+    height: 28px;
+    left: 54px;
+    bottom: 430px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.descricao2{
+    width: 300px;
+    height: 100px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.convite{
+    position: relative;
+    width: 250px;
+    height: 21px;
+    left: 52px;
+    bottom: 300px;
+
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.conviteEquipa{
+    position: relative;
+    width: 300px;
+    height: 42px;
+    left: 80px;
+    bottom: 240px;
+    font-size: 20px;
+    font-family: 'Radley';
+    font-style: normal;
+}
+
+.conviteAtleta{
+    position: relative;
+    width: 300px;
+    height: 42px;
+    left: 80px;
+    bottom: 200px;
+    font-size: 20px;
+    font-family: 'Radley';
+    font-style: normal;
+}
+
+.criar{
+    /*
+    position: relative;
+    width: 105px;
+    height: 36px;
+    left: 715px;
+    top: 600px;
+    border: 1px solid #E5F4BA;*/
+
+    position: relative;
+    width: 193px;
+    height: 65px;
+    left: 671px;
+    top: 400px;
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.15em;
+
+    background: #BCD27B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
