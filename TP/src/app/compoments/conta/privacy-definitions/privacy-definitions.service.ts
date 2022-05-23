@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpRequest } from "@angula
 import { Injectable } from "@angular/core";
 import { catchError, map, Observable, tap, throwError } from "rxjs";
 import { IPrivacySettings } from "./privacySettings";
-
+ 
 @Injectable({
     providedIn: 'root'
 })

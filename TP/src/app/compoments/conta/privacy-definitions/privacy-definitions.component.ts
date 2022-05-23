@@ -36,7 +36,7 @@ export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
   sub!: Subscription;
   errorMessage = '';
 
-  settings: IPrivacySettings = { profileVisibility: 0, commentsPermission: 0 }
+  settings: IPrivacySettings = { profileVisibility: 0, commentsPermission: 0 , unfriendContactPermission: false, unfriendTrodyVisualization: false, privateRaces: false, privateRoutes: false, privateTrainings: false}
 
   constructor(private privacySettingsService: PrivacyDefinitionsService) { }
 
@@ -77,11 +77,6 @@ export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
           this.cbPcFriends = false
           this.cbPcPrivate = false
         }
-
-
-        
-
-
       },
       error: err => this.errorMessage = err
     });
@@ -126,6 +121,27 @@ export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
       this.cbPcFriends = false
       this.cbPcPrivate = false
     }
+  } 
+
+  unfriendContactChange(){
+    this.settings.unfriendContactPermission = !this.settings.unfriendContactPermission
+    console.log(this.settings.unfriendContactPermission)
+  }
+
+  unfriendTrofyVisualizationChange(){
+    this.settings.unfriendTrodyVisualization = !this.settings.unfriendTrodyVisualization
+  }
+
+  privateTrainingsChange(){
+    this.settings.privateTrainings = !this.settings.privateTrainings
+  }
+
+  privateRacesChange(){
+    this.settings.privateRaces = !this.settings.privateRaces
+  }
+
+  privateRoutesChange(){
+    this.settings.privateRoutes = !this.settings.privateRoutes
   }
 
   updatePrivacySettings(): void {
