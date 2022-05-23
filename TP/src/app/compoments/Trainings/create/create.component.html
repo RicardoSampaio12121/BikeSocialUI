@@ -1,24 +1,24 @@
-<!-- Autor: 21133 Paula Rodrigues-->
-<div class="container py-5 px-lg-5" 
+<!--Autor: 21133 Paula Rodrigues-->
+<div class="container py-5 px-lg-5 alinhar-vertical" 
 style="margin-top: 3rem;">
-    <form class="PP">
-    <div class="barra1"></div>
+    
 
-    <div class="head">
-        <div><p class="titulo">Criar Treino </p> 
-        </div>-->
 
-        <div><p class="tipoTreino"> *Tipo de Treino </p>
+    <div class="head alinhar-horizontal">
+        <div><p class="titulo">Criar Treino </p>
         </div>
 
+        <div><p class="tipoProva">*Tipo de Treino</p>
+        </div>
+<!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
         <div>
-            <p class="escolher_treino">
-            <select class="scroll" id="treino" name="tipo_treino" placeholder="Selecione" required>
-                <option hidden disabled selected value>Selecione</option>
-                <option value="Estrada">Estrada</option>
-                <option value="Pista">Pista</option>
-                <option value="Montanha">Montanha</option>
-                <option value="BMX">BMX</option>
+            <p class="escolher_prova">
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+            <option hidden disabled selected value>Selecione</option>
+            <option value="Estrada">Estrada</option>
+            <option value="Pista">Pista</option>
+            <option value="Montanha">Montanha</option>
+            <option value="BMX">BMX</option>
             </select>
             </p>
         </div>
@@ -27,86 +27,85 @@ style="margin-top: 3rem;">
     <div class="barra2"></div>
 
     <!-- Parte do nome, localidade e distancia-->
-    <div class="NLD">
-        <div class="nome"> 
+    <div class="NLD alinhar-horizontal">
+        <div class="nome alinhar-vertical"> 
            <label  for="fname">*Nome</label>
-            <input class="nome1" type="text" id="fname" name="fname" required>
+            <input class="nome1" type="text" id="fname" name="fname" required/>
             
         </div>
 
-        <div class="localidade"> 
+        <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Localidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required>
+            <input class="localidade1" type="text" id="fname" name="fname" required/>
         </div>
 
         <div> 
-            <p class="distancia">*Distância:</p>
+            <p class="distancia"> *Distância:</p>
         </div>
         <div> 
-            <input class="distancia1" type="number" id="fname" name="fname" required>
+            <input class="distancia1" type="number" min="0" id="fname" name="fname" required/>
             <label class="km">km</label>
         </div>
     </div>
 
 <!-- Parte da Data e tempo previsto -->
-    <div class="DT">
-            <div>
+    <div class="DT alinhar-horizontal">
+            <!-- <div class="alinhar-vertical"> -->
                 <p class="data">*Data: </p>
-            </div>
-            <div> 
-                <input class="data1" type="date" id="fname" name="fname" required>
-            </div>
-            <div> 
+             
+                <input class="data1" type="date" id="fname" name="fname" required/>
+            <!-- </div> -->
+            <div class="alinhar-horizontal"> 
                 <p class="tempo">*Tempo previsto: </p>
-            </div>
-            <div> 
-                <input class="tempo1" type="time" id="fname" name="fname" required>  
+            
+                <input class="tempo1" type="number" id="fname" name="fname" required/> 
                 <label class="h">h</label>   
             </div>
         
     </div>
 
     <!-- Parte do Incio -->
-    <div> 
+    <div class="alinhar-horizontal"> 
         <p class="inicio">*Inicio:</p>
 
         <div> 
-            <input class="tempo2" type="time" id="fname" name="fname" required> 
+            <input class="tempo2" type="time" id="fname" name="fname" required/> 
             <label class="hincio">h</label>   
         </div>
     </div>
 <!-- Parte da descrição -->
-    <div> 
-        <div class="descricao"> 
-            <label  for="fname">Descrição:</label>
-             <input class="descricao2" type="text" id="fname" name="fname">
+    <div class="alinhar-horizontal"> 
+        <div class="descricao alinhar-vertical"> 
+            <label  for="fname">Estado: </label>
+             <input class="descricao2" type="text" id="fname" name="fname"/>
          </div>
+         <button class="criar" >
+            Criar
+        </button>
     </div>
 
 <!-- Parte para enviar convites -->
-    <div>
+    <div class="convites alinhar-horizontal">
         <p class="convite" >Enviar convites para:</p>
-        <div > 
-           <div class="conviteEquipa"> 
-                <input type="checkbox" id="one" /> 
-                <label>Equipas</label>
+    </div>
+    <div class="convites alinhar-horizontal">
+        <div class="alinhar-vertical" > 
+           <div > 
+                <input  type="checkbox" id="one" /> 
+                <label class="conviteEquipa ">Equipas</label>
             </div>
             <div class="conviteAtleta">
-                <input type="checkbox" id="two" />
-                <label>Atletas</label>
+                <input type="checkbox" id="two" /> 
+                <label> Atletas</label>
             </div>
         </div>
     </div>
 
 <!-- Botao criar  -->
 
-    <div>
-        <button class="criar">
-            Criar
-        </button>
+ 
+        
 
-    </div>
-
-    </form>
-
+    
+    
 </div>

@@ -20,7 +20,7 @@ const routes: Routes = [{
     component: ProfileComponent
   },
   {
-    path: "criartreino",
+    path: "createtraining",
     component: CreateComponent
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [{
     component: InvitesComponent
   },
   {
-    path: "criarprova",
+    path: "createrace",
     component: CreateComponentR
   },
   { path: "inscreverprova",
