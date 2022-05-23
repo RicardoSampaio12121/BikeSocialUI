@@ -32,7 +32,7 @@
                 <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input id="txtName" class="form-control" type="text" [(ngModel)]="account.name">
+                    <input id="txtName" class="form-control" type="text" [(ngModel)]="account.name" disabled>
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
@@ -68,7 +68,7 @@
                 <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <select class="form-control" name="genders" id="genders" [(ngModel)]="account.sex">
+                    <select class="form-control" name="genders" id="genders" [(ngModel)]="account.sex" (change)="changeSex()">
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
                         <option value="other">Outro</option>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input id="txtGender" class="form-control" type="text" placeholder="Outro..." disabled>
+                    <input id="txtGender" class="form-control" type="text" placeholder="Outro..." [(ngModel)]="otherSex" [disabled]="otherDisabled">
                 </div>
             </div>
 
@@ -96,11 +96,11 @@
                 <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input id="txtPassword" class="form-control" type="password">
+                    <input id="txtPassword" class="form-control" type="password" [(ngModel)]="password">
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input id="txtConfirmPassword" class="form-control" type="password">
+                    <input id="txtConfirmPassword" class="form-control" type="password" [(ngModel)]="confirmPassword">
                 </div>
             </div>
 
@@ -120,11 +120,11 @@
                 <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input class="form-control" type="password">
+                    <input class="form-control" type="password" [(ngModel)]="newPassword">
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input class="form-control" type="password">
+                    <input class="form-control" type="password" [(ngModel)]="confirmNewPassword">
                 </div>
             </div>
 
@@ -133,7 +133,8 @@
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
                     <button id="btnSubmit" type="button" class="btn btn-primary btn-lg btn-sm btn-block"
-                        style="height: 35px;">
+                        style="height: 35px;"
+                        (click)="updateAccountInformation()">
                         Confirmar</button>
                 </div>
 

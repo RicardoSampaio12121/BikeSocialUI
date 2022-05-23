@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError, Observable, tap, throwError } from "rxjs";
-import { IAccountSettings } from "./accountDefinitions";
+import { catchError, map, Observable, tap, throwError } from "rxjs";
+import { IPrivacySettings } from "../privacy-definitions/privacySettings";
+import { IAccountSettings, IUpdateAccountSettings } from "./accountDefinitions";
 
 @Injectable({
     providedIn: 'root'
@@ -9,6 +10,7 @@ import { IAccountSettings } from "./accountDefinitions";
 export class AccountDefinitionsService{
     private accountSettingsEndpoint = "https://localhost:7239/users/"
     private getAccountSettingsEndpoint = "getAccountSettings"
+    private updateAccountSettingsEndpoint = "updateInformation"
 
     constructor(private http: HttpClient) {}
 
@@ -16,6 +18,15 @@ export class AccountDefinitionsService{
         return this.http.get<IAccountSettings>(this.accountSettingsEndpoint.concat(this.getAccountSettingsEndpoint))
             .pipe(
                 tap(data => console.log('ALL: ', JSON.stringify(data))),
+                catchError(this.handleError)
+            );
+    }
+
+    updateAccountSettings(account: IUpdateAccountSettings): Observable<IUpdateAccountSettings>{
+        return this.http.put<IUpdateAccountSettings>(this.accountSettingsEndpoint.concat(this.updateAccountSettingsEndpoint), account)
+            .pipe(
+                tap(() => console.log('Update account information: ' + account.newEmail)),
+                map(() => account),
                 catchError(this.handleError)
             );
     }

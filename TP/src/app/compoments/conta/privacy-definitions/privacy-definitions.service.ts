@@ -20,7 +20,7 @@ export class PrivacyDefinitionsService {
                 catchError(this.handleError)
             );
     }
-
+ 
 
     updatePrivacySettings(settings: IPrivacySettings): Observable<IPrivacySettings> {
         return this.http.put<IPrivacySettings>(this.privacySettingsEndpoint.concat(this.updatePrivacySettingsEndpoint), settings)
@@ -29,8 +29,6 @@ export class PrivacyDefinitionsService {
                 map(() => settings),
                 catchError(this.handleError)
             );
-
-
     }
 
     private handleError(err: HttpErrorResponse): Observable<never> {
