@@ -28,18 +28,18 @@ style="margin-top: 3rem;">
     <div class="NLD alinhar-horizontal">
         <div class="nome alinhar-vertical"> 
            <label  for="fname">*Nome</label>
-            <input  class="nome1" type="text" id="fname" name="nome" aria-describedby="nome"  required/>
+            <input  class="nome1" type="text" id="fname" name="nome" aria-describedby="nome" [(ngModel)]= "criarRace.nome" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label for="fname">*Data/ Inicio: </label>
-            <input class="data1" type="datetime-local" id="fname" name="fname" required/>
+            <input class="data1" type="datetime-local" id="fname" name="fname" [(ngModel)]= "criarRace.dataInicio" required/>
         </div>
         
         <div class="alinhar-vertical">
             
             <label class="distancia"> *Distância:</label>
             <div>
-                <input class="distancia1" type="number" min="0" id="fname" name="fname" required/>
+                <input class="distancia1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "criarRace.distancia" required/>
                 <label class="km">km</label>
             </div>
             
@@ -48,7 +48,7 @@ style="margin-top: 3rem;">
         <div class="alinhar-vertical"> 
             <label class="tempo">*Tempo previsto: </label>
             <div>
-                <input class="tempo1" type="number" id="fname" name="fname" required/> 
+                <input class="tempo1" type="number" id="fname" name="fname" [(ngModel)]= "criarRace.tempoPre" required/> 
                 <label class="h">h</label> 
             </div>  
         </div>
@@ -60,15 +60,15 @@ style="margin-top: 3rem;">
     <div class="DT alinhar-horizontal">
         <div class="localidade alinhar-vertical"> 
             <label class="localidade" for="fname">*Cidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)]= "local.cidade" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Localidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.localidade" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Lugar</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.lugar" required/>
         </div>
         
     </div>
@@ -77,7 +77,7 @@ style="margin-top: 3rem;">
     <div class="alinhar-horizontal"> 
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Federação</label>
-            <input class="localidade1" type="text" id="fname" name="fname"/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "criarRace.federacao" />
         </div>
         
     </div>
@@ -85,34 +85,14 @@ style="margin-top: 3rem;">
     <div class="alinhar-horizontal"> 
         <div class="descricao alinhar-vertical"> 
             <label  for="fname">Estado: </label>
-             <input class="descricao2" type="text" id="fname" name="fname"/>
+             <input class="descricao2" type="text" id="fname" name="fname" [(ngModel)] = "criarRace.estado" />
          </div>
-         <button class="criar" >
+         <button class="criar" (click)="createRACE()" >
             Criar
         </button>
     </div>
 
-<!-- Parte para enviar convites -->
-<!--     <div class="convites alinhar-horizontal">
-        <p class="convite" >Enviar convites para:</p>
-    </div>
-    <div class="convites alinhar-horizontal">
-        <div class="alinhar-vertical" > 
-           <div > 
-                <input  type="checkbox" id="one" /> 
-                <label class="conviteEquipa ">Equipas</label>
-            </div>
-            <div class="conviteAtleta">
-                <input type="checkbox" id="two" /> 
-                <label> Atletas</label>
-            </div>
-        </div>
-    </div>
- -->
-<!-- Botao criar  -->
-
- 
-        
+   
 
     
     
