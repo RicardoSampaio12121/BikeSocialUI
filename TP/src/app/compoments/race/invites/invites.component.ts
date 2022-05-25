@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { InvitesRacesService } from './invites-race-service';
+import { IRaces } from './IRaces';
 
 @Component({
   selector: 'app-invites',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvitesComponentR implements OnInit {
 
-  constructor() { }
+  sub!: Subscription;
+  availableRaces: Array<IRaces>,
+  races: IRaces;
+
+  constructor(private racesService: InvitesRacesService) { }
 
   ngOnInit(): void {
+    this.sub = this.racesService.getAvailableRacesFunc().subscribe({
+      next: this.availableRaces => {
+        this.availableRaces = this.availableRaces
+      }
+    })
   }
-
 }

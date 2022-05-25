@@ -64,28 +64,38 @@ style="margin-top: 3rem;">
         <table class="table table-light">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col-1">Prova</th>
-                    <th scope="col-1">Localidade</th>
-                    <th scope="col-1">Dia</th>
-                    <th scope="col-1">Hora</th>
-                    <th scope="col-1">Duração</th>
-                    <th scope="col-1">Distância</th>
-                    <th scope="col-1">Inscrever</th>
+                    <th scope="col-1">Description</th>
+                    <th scope="col-1">Distance</th>
+                    <th scope="col-1">Estimated Time</th>
+                    <th scope="col-1">Date Time</th>
+                    <th scope="col-1">Federation Id</th>
+                    <th scope="col-1">Estimated Time</th>
+                    <th scope="col-1">Race Type Id</th>
+                    <th scope="col-1">Place Id</th>
+                    <th scope="col-1">State</th>
 
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Estrada</td>
+                <tr *ngFor>
+                    <!-- <td>Estrada</td>
                     <td>Braga</td>
                     <td>15/07</td>
                     <td>14:00</td>
                     <td>2 horas</td>
-                    <td>30 Km</td>
+                    <td>30 Km</td> -->
+                    <td>{{ races.description }}</td>
+                    <td>{{ races.distance }}</td>
+                    <td>{{ races.estimatedTime }}</td>
+                    <td>{{ races.DateTime }}</td>
+                    <td>{{ races.FederationId }}</td>
+                    <td>{{ races.RaceTypeId }}</td>
+                    <td>{{ races.placeId }}</td>
+                    <td>{{ races.state }}</td>
                     <td><input type="checkbox"></td>
 
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Pista</td>
                     <td>Trofa</td>
                     <td>20/06</td>
@@ -93,8 +103,8 @@ style="margin-top: 3rem;">
                     <td>1 horas</td>
                     <td>23 Km</td>
                     <td><input type="checkbox"></td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                     <td>Montanha</td>
                     <td>Gerês</td>
                     <td>20/10</td>
@@ -102,8 +112,8 @@ style="margin-top: 3rem;">
                     <td>4 horas</td>
                     <td>50 Km</td>
                     <td><input type="checkbox"></td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                     <td>BMX</td>
                     <td>Porto</td>
                     <td>20/07</td>
@@ -111,7 +121,7 @@ style="margin-top: 3rem;">
                     <td>3 horas</td>
                     <td>27 km</td>
                     <td><input type="checkbox"></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 

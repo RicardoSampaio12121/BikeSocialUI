@@ -1,4 +1,8 @@
+import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { IInvite } from './IInvite';
+import { InvitesService } from './invites-service';
 
 @Component({
   selector: 'app-invites',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvitesComponent implements OnInit {
 
-  constructor() { }
+  sub!: Subscription;
+  availableTrainings: Array<IInvite>
+  invite: IInvite; //para poder chamar os valores para a tabela de html
+
+  constructor(private trainingsService: InvitesService) { }
+
 
   ngOnInit(): void {
+    this.sub = this.trainingsService.getAvailableTrainingsFunc().subscribe({
+      next: availableTrainings => {
+        this.availableTrainings = availableTrainings
+      }
+    })
   }
-
 }
