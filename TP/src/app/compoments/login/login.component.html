@@ -1,19 +1,22 @@
 <div class="barra-cima"></div>
-<article class="janela centrado">
-    <h1>BikeSocial</h1>
-    <p class="label-input">Username</p>
-    <div class="alinhar-vertical">
-        <input type="text" class="inputUsername" [(ngModel)]="newLogin.email"  />
-    </div>
-    <p class="erro escondido" id="erro-username">O username que inseriste não está associado a uma conta.</p>
-    <p class="label-input">Password</p>
-    <div class="alinhar-vertical">
-        <input type="password" class="inputPass" [(ngModel)]="newLogin.password" />
-    </div>
-    <p class="erro escondido" id="erro-pass">A palavra-passe que inseriste está incorreta.</p>
-    <button (click)="login()" >Login</button>
-    <p class="sugestao">
-        Não tem uma conta? <a href="../register/register.component.html">Crie</a> uma agora.
-    </p>
-</article>
+
+<div class="image">
+    <article class="janela centrado">
+        <h1>BikeSocial</h1>
+        <p class="label-input">Username</p>
+        <div class="alinhar-vertical">
+            <input type="text" class="inputUsername" [(ngModel)]="newLogin.email" />
+        </div>
+        <p class="erro escondido" id="erro-username">O username que inseriste não está associado a uma conta.</p>
+        <p class="label-input">Password</p>
+        <div class="alinhar-vertical">
+            <input type="password" class="inputPass" [(ngModel)]="newLogin.password" />
+        </div>
+        <p class="erro escondido" id="erro-pass">A palavra-passe que inseriste está incorreta.</p>
+        <button (click)="login()">Login</button>
+        <p class="sugestao">
+            Não tem uma conta? <a href="../register/register.component.html">Crie</a> uma agora.
+        </p>
+    </article>
+</div>
 <script src="login.js"></script>

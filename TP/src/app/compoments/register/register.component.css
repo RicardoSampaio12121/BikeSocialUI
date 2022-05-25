@@ -11,6 +11,12 @@ body {
     background-size: cover;
 }
 
+.image{
+    height:50em; background-size:cover; width:auto;
+    background-image:url('../../../assets/background.png');
+    background-position:50% 50%;
+}
+
 .barra-cima {
     background-color: #C4C4C4;
     padding: 25px;

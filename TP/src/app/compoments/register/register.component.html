@@ -1,82 +1,84 @@
 <div class="barra-cima"></div>
 <!-- Janela de registo -->
-<article class="janela centrado alinhar-horizontal">
-    <!-- Zona de registo -->
-    <div class="alinhar-vertical" id="zona-registo">
-        <h1>BikeSocial</h1>
-        <!-- zona dos 2 campos -->
-        <div class="alinhar-horizontal">
-            <!-- campo lado esquerdo -->
-            <div class="alinhar-vertical">
-                <p class="label-input">Username</p>
-                <input type="text" class="inputUsername" [(ngModel)]="newUser.username" />
+<div class="image">
+    <article class="janela centrado alinhar-horizontal">
+        <!-- Zona de registo -->
+        <div class="alinhar-vertical" id="zona-registo">
+            <h1>BikeSocial</h1>
+            <!-- zona dos 2 campos -->
+            <div class="alinhar-horizontal">
+                <!-- campo lado esquerdo -->
+                <div class="alinhar-vertical">
+                    <p class="label-input">Username</p>
+                    <input type="text" class="inputUsername" [(ngModel)]="newUser.username" />
 
-                <p class="erro escondido" id="erro-username">O username que escolheste já está a ser utilizado!</p>
+                    <p class="erro escondido" id="erro-username">O username que escolheste já está a ser utilizado!</p>
 
-                <p class="label-input">Palavra Passe</p>
-                <input type="text" class="inputPass" [(ngModel)]="newUser.password" />
+                    <p class="label-input">Palavra Passe</p>
+                    <input type="text" class="inputPass" [(ngModel)]="newUser.password" />
 
-                <p class="erro escondido" id="erro-pass">A palavra passe tem de ter no mínimo 8 caracteres!</p>
-                <p class="label-input">Data Nascimento</p>
-                <!-- campos da data -->
-                <div class="alinhar-horizontal">
-                    <!-- Dia -->
-                    <div class="alinhar-vertical">
-                        <p class="label-input">Dia</p>
-                        <input type="text" class="input-data" [(ngModel)]="day" />
+                    <p class="erro escondido" id="erro-pass">A palavra passe tem de ter no mínimo 8 caracteres!</p>
+                    <p class="label-input">Data Nascimento</p>
+                    <!-- campos da data -->
+                    <div class="alinhar-horizontal">
+                        <!-- Dia -->
+                        <div class="alinhar-vertical">
+                            <p class="label-input">Dia</p>
+                            <input type="text" class="input-data" [(ngModel)]="day" />
+                        </div>
+
+                        <!-- Mês -->
+                        <div class="alinhar-vertical">
+                            <p class="label-input">Mês</p>
+                            <input type="text" class="input-data" [(ngModel)]="month" />
+                        </div>
+
+                        <!-- Ano -->
+                        <div class="alinhar-vertical">
+                            <p class="label-input">Ano</p>
+                            <input type="text" class="input-data" [(ngModel)]="year" />
+                        </div>
                     </div>
 
-                    <!-- Mês -->
-                    <div class="alinhar-vertical">
-                        <p class="label-input">Mês</p>
-                        <input type="text" class="input-data" [(ngModel)]="month" />
-                    </div>
+                    <p class="label-input">Email</p>
+                    <input type="text" class="inputEmail" [(ngModel)]="newUser.email" />
 
-                    <!-- Ano -->
-                    <div class="alinhar-vertical">
-                        <p class="label-input">Ano</p>
-                        <input type="text" class="input-data" [(ngModel)]="year" />
-                    </div>
+                    <p class="erro escondido" id="erro-email">O email que escolheste já está a ser utilizado!</p>
                 </div>
+                <!-- campo lado direito -->
+                <div class="alinhar-vertical">
+                    <p class="label-input">Primeiro Nome</p>
+                    <form>
+                        <input type="text" />
+                    </form>
+                    <p class="label-input">Último Nome</p>
+                    <form>
+                        <input type="text" />
+                    </form>
+                    <p>Sexo</p>
+                    <select id="escolher-sexo" [(ngModel)]="newUser.sex">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outro</option>
+                    </select>
 
-                <p class="label-input">Email</p>
-                <input type="text" class="inputEmail" [(ngModel)]="newUser.email" />
-
-                <p class="erro escondido" id="erro-email">O email que escolheste já está a ser utilizado!</p>
+                    <p class="label-input" id="tipo-user">Sou...</p>
+                    <select class="input-tipoUser" [(ngModel)]="userTypeInText" (change)="changeUserType()">
+                        <option>Atleta</option>
+                        <option>Pai</option>
+                        <option>Diretor</option>
+                        <option>Treinador</option>
+                        <option>Funcionário</option>
+                    </select>
+                </div>
             </div>
-            <!-- campo lado direito -->
-            <div class="alinhar-vertical">
-                <p class="label-input">Primeiro Nome</p>
-                <form>
-                    <input type="text" />
-                </form>
-                <p class="label-input">Último Nome</p>
-                <form>
-                    <input type="text" />
-                </form>
-                <p>Sexo</p>
-                <select id="escolher-sexo" [(ngModel)]="newUser.sex">
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                    <option>Outro</option>
-                </select>
-
-                <p class="label-input" id="tipo-user">Sou...</p>
-                <select class="input-tipoUser" [(ngModel)]="userTypeInText" (change)="changeUserType()">
-                    <option>Atleta</option>
-                    <option>Pai</option>
-                    <option>Diretor</option>
-                    <option>Treinador</option>
-                    <option>Funcionário</option>
-                </select>
-            </div>
+            <p class="erro escondido" id="erro-vazios">Por favor preenche todos os campos.</p>
+            <button (click)="register()">Criar Conta</button>
         </div>
-        <p class="erro escondido" id="erro-vazios">Por favor preenche todos os campos.</p>
-        <button (click)="register()">Criar Conta</button>
-    </div>
-    <div class="linha-vertical"></div>
-    <!-- Zona de informação da rede social -->
-    <div class="alinhar-vertical informacao-adicional">
-        <h2>O BikeSocial ajuda-te a comunicar e a partilhar com os ciclistas que fazem parte da tua vida.</h2>
-    </div>
-</article>
+        <div class="linha-vertical"></div>
+        <!-- Zona de informação da rede social -->
+        <div class="alinhar-vertical informacao-adicional">
+            <h2>O BikeSocial ajuda-te a comunicar e a partilhar com os ciclistas que fazem parte da tua vida.</h2>
+        </div>
+    </article>
+</div>
