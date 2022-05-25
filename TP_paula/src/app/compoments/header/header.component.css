@@ -1,0 +1,30 @@
+.searchBar {
+    padding-left: 25px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+    background-color: white;
+  }
+
+.myHeader {
+    background-color: #00b4d8;
+}
+
+.input-margin-bot{
+    margin-bottom: 20px;
+}
+
+.round-profile-picture-large {
+    height: 125px;
+    width: 125px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .round-profile-picture-small {
+    height: 75px;
+    width: 75px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
