@@ -11,18 +11,18 @@ export class CreateComponentR implements OnInit {
 
 
   criarRace: CreateRace = {
-          nome: " ", 
+          nome: '', 
           dataInicio: new Date() , 
           distancia: 0,
           tempoPre: 0,
-          federacao: " ", 
-          estado: ""
+          federacao: '', 
+          estado: ''
   };
 
   local: Localidade ={
-        cidade: "",
-        localidade: "",
-        lugar: ""
+        cidade: '',
+        localidade: '',
+        lugar: ''
   };
 
 
