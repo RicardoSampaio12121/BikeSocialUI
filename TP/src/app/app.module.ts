@@ -21,8 +21,9 @@ import { PostCardComponent } from './compoments/post-card/post-card.component';
 
 import { CreateComponentR } from './compoments/race/create/create.component';
 
-import { LoginComponent } from './compoments/login/login.component';
+
 import { RegisterComponent } from './compoments/register/register.component';
+import { LoginComponent } from './compoments/login/login.component';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { RegisterComponent } from './compoments/register/register.component';
     FriendListEntryComponent,
     PostCardComponent,
 
-    CreateComponentR
+    CreateComponentR,
 
     LoginComponent,
     RegisterComponent,
