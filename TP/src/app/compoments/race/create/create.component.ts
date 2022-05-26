@@ -21,7 +21,18 @@ export class CreateComponentR implements OnInit {
     estado: ''
   };
 
-  createRace: CreateRaceA = { description: "", distance: 0, estimatedTime: 0, dateTime: new Date(), FederationId: 0, RaceTypeId: 0, localidade: "", cidade: "", lugar: "", state: "" }
+  createRace: CreateRaceA = { 
+    description: "", 
+    distance: 0, 
+    estimatedTime: 0, 
+    dateTime: new Date(), 
+    FederationId: 0, 
+    RaceTypeId: 0, 
+    localidade: "", 
+    cidade: "", 
+    lugar: "", 
+    state: "" 
+}
 
   local: Localidade = {
     cidade: '',
