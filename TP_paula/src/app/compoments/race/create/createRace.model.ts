@@ -2,7 +2,7 @@ export interface CreateRace {
     id?: number
     nome:string
     dataInicio: Date
-    distanca: number
+    distancia: number
     tempoPre: number
     federacao: string
     estado: string
@@ -10,7 +10,7 @@ export interface CreateRace {
 }
 
 export interface Localidade{
-    cidade? : string
-    localidade? : string
-    lugar? : string
+    cidade : string
+    localidade : string
+    lugar : string
 }

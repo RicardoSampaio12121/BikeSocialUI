@@ -1,6 +1,11 @@
+
+import { Component, OnInit } from '@angular/core';
+import { CreateService } from './createR.service';
+
 import { Component, OnInit, NgModule } from '@angular/core';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CreateService } from './create.service';
+
 import { CreateRace, Localidade } from './createRace.model';
 
  @Component({
@@ -11,23 +16,36 @@ import { CreateRace, Localidade } from './createRace.model';
 export class CreateComponentR implements OnInit {
 
 
-  criarRace: CreateRace = {nome: "", dataInicio: new Date() , distanca: 0,
-      tempoPre: 0,
-    federacao: "", 
-    estado: ""}
+  criarRace: CreateRace = {
+          nome: '', 
+          dataInicio: new Date() , 
+          distancia: 0,
+          tempoPre: 0,
+          federacao: '', 
+          estado: ''
+  };
 
-  local: Localidade [] = []; 
+  local: Localidade ={
+        cidade: '',
+        localidade: '',
+        lugar: ''
+  };
 
-  coiso: string = ""
 
   
 
-
-
-  constructor(private CreateService: CreateService,
-              private router: AppRoutingModule) { }
+  constructor(private CreateService: CreateService) { }
 
   ngOnInit(): void {
   }
+
+
+  createRACE(): void{
+    this.CreateService.create(this.criarRace).subscribe((race) => {
+      this.criarRace = race;
+      console.log("created: ", this.criarRace);
+      alert("sucesso ");
+    });
+  } 
 
 }
