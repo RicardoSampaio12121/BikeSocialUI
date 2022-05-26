@@ -11,12 +11,11 @@ style="margin-top: 3rem;">
 <!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
         <div>
             <p class="escolher_prova">
-            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" [(ngModel)]="raceTypeString" (change)="changeRaceyType()" required> <!-- required -->>
             <option hidden disabled selected value>Selecione</option>
             <option value="Estrada">Estrada</option>
-            <option value="Pista">Pista</option>
-            <option value="Montanha">Montanha</option>
-            <option value="BMX">BMX</option>
+            <option value="Monte">Monte</option>
+            <option value="Misto">Misto</option>
             </select>
             </p>
         </div>
@@ -76,8 +75,13 @@ style="margin-top: 3rem;">
     <!-- Parte do Incio -->
     <div class="alinhar-horizontal"> 
         <div class="localidade alinhar-vertical"> 
-            <label  for="fname">*Federação</label>
-            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "criarRace.federacao" />
+            <label  for="fname">*Federação</label>  
+
+            <select [(ngModel)]="federacaoString" (change)="changeFederation()" > 
+                <option *ngFor="let n of fede" [attr.value]="n.name" [attr.selected]="">{{n.name}}</option>
+              </select>
+
+            
         </div>
         
     </div>
@@ -92,8 +96,6 @@ style="margin-top: 3rem;">
         </button>
     </div>
 
-   
-
-    
+       
     
 </div>

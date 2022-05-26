@@ -4,13 +4,30 @@ export interface CreateRace {
     dataInicio: Date
     distancia: number
     tempoPre: number
-    federacao: string
     estado: string
 
+}
+
+export interface CreateRaceA {
+    description: string,
+    distance: number,
+    estimatedTime: number,
+    dateTime: Date,
+    FederationId: number, 
+    RaceTypeId: number,
+    cidade: string, 
+    localidade : string
+    lugar : string
+    state: string
 }
 
 export interface Localidade{
     cidade : string
     localidade : string
     lugar : string
+}
+
+export interface Federacao{
+    id: number
+    name: string
 }
