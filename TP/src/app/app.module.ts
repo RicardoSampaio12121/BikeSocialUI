@@ -18,7 +18,12 @@ import { AuthInterceptorProvider } from './auth.interceptor';
 import { ProfileComponent } from './views/profile/profile.component';
 import { FriendListEntryComponent } from './compoments/friend-list-entry/friend-list-entry.component';
 import { PostCardComponent } from './compoments/post-card/post-card.component';
+
 import { CreateComponentR } from './compoments/race/create/create.component';
+
+import { LoginComponent } from './compoments/login/login.component';
+import { RegisterComponent } from './compoments/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { CreateComponentR } from './compoments/race/create/create.component';
     ProfileComponent,
     FriendListEntryComponent,
     PostCardComponent,
+
     CreateComponentR
+
+    LoginComponent,
+    RegisterComponent,
+
   ],
   imports: [
     BrowserModule,

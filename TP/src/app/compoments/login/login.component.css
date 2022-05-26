@@ -1,0 +1,127 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+body {
+    background-image: url('../../../assets/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.image{
+    height:50em; background-size:cover; width:auto;
+    background-image:url('../../../assets/background.png');
+    background-position:50% 50%;
+}
+
+.barra-cima {
+    background-color: #C4C4C4;
+    padding: 25px;
+}
+
+.centrado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.janela {
+    background-color: white;
+    width: 600px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 29px;
+}
+
+button{
+    background: #14B554;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+input {
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+/* Orientar de modo vertical */
+.alinhar-vertical{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px 20px;
+}
+
+.label-input{
+    padding-left: 50px;
+    margin-bottom: 0px;
+}
+
+.erro{
+    padding-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: red;
+}
+
+.escondido{ display: none; }
+
+#erro-pass{
+    margin-bottom: 10px;
+}
+
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
+    background-color: #14B554;
+    color: white;
+}
+
+.sugestao{
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: blue;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: purple;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+a:active {
+    text-decoration: underline;
+    color: red;
+}

@@ -37,14 +37,18 @@ style="margin-top: 3rem;">
         </div>
         <div class="localidade alinhar-vertical"> 
             <label for="fname">*Data/ Inicio: </label>
+
             <input class="data1" type="datetime-local" id="fname" name="fname" [(ngModel)]= "createTraining.dateTime" required/>
+
         </div>
         
         <div class="alinhar-vertical">
             
             <label class="distancia"> *Distância:</label>
             <div>
+
                 <input class="distancia1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "createTraining.distance" required/>
+
                 <label class="km">km</label>
             </div>
             
@@ -53,7 +57,9 @@ style="margin-top: 3rem;">
         <div class="alinhar-vertical"> 
             <label class="tempo">*Tempo previsto: </label>
             <div>
+
                 <input class="tempo1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "createTraining.estimatedTime" required/> 
+
                 <label class="h">h</label> 
             </div>  
         </div>
@@ -65,6 +71,7 @@ style="margin-top: 3rem;">
     <div class="DT alinhar-horizontal">
         <div class="localidade alinhar-vertical"> 
             <label class="localidade" for="fname">*Cidade</label>
+
             <input class="localidade1" type="text" id="fname" name="fname"  [(ngModel)]= "local.cidade"  required/>
         </div>
         <div class="localidade alinhar-vertical"> 
@@ -74,18 +81,23 @@ style="margin-top: 3rem;">
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Lugar</label>
             <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.lugar" required/>
+
         </div>
         
     </div>
 
     <!-- Parte do Incio -->
+
    <!--  <div class="alinhar-horizontal"> 
+
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Federação</label>
             <input class="localidade1" type="text" id="fname" name="fname"/>
         </div>
         
+
     </div> -->
+
 <!-- Parte da descrição -->
     <div class="alinhar-horizontal"> 
         <!-- <div class="descricao alinhar-vertical"> 
