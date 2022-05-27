@@ -60,11 +60,17 @@ export class RegisterComponent implements OnInit {
     console.log("UserType: " + this.newUser.userTypeId)
     console.log(JSON.stringify(this.newUser))
 
-    this.sub = this.service.registerUser(this.newUser).subscribe({
-      next: createdUser => {
-        console.log("Coiso coisado")
-      }
-    })
+    if (this.day != "" && this.month != "" && this.year != "" && this.newUser.email != "" && this.newUser.password != "" && 
+        this.newUser.sex != "" && this.newUser.userTypeId != 0 && this.newUser.username != "")
+    {
+      this.sub = this.service.registerUser(this.newUser).subscribe({
+        next: createdUser => {
+          console.log("Coiso coisado")
+          alert("Utilizador criado com sucesso!");
+        }
+      })
+    }
+    else alert("Campos por preencher");
   }
 
   teste() {

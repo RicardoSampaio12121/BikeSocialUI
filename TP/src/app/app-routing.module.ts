@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountDefinitionsComponent } from './compoments/conta/account-definitions/account-definitions.component';
 import { PrivacyDefinitionsComponent } from './compoments/conta/privacy-definitions/privacy-definitions.component';
+import { LoginComponent } from './compoments/login/login.component';
 import { CreateComponentR } from './compoments/race/create/create.component';
 import { InvitesComponentR } from './compoments/race/invites/invites.component';
+import { RegisterComponent } from './compoments/register/register.component';
 import { FooterComponent } from './compoments/templates/footer/footer.component';
 import { CreateComponent } from './compoments/Trainings/create/create.component';
 import { InvitesComponent } from './compoments/Trainings/invites/invites.component';
@@ -39,6 +41,14 @@ const routes: Routes = [{
   },
   { path: "privacyDefinitions",
     component: PrivacyDefinitionsComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
   }
 
 

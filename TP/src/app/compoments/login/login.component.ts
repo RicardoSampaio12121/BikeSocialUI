@@ -19,14 +19,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-
-    console.log(this.newLogin)
-
-    this.sub = this.service.login(this.newLogin).subscribe({
-      next: loggedUser => {
-        localStorage.setItem('token', loggedUser.token);
-      }
-    })
+    if (this.newLogin.email != "" && this.newLogin.password != "")
+    {
+      this.sub = this.service.login(this.newLogin).subscribe({
+        next: loggedUser => {
+          localStorage.setItem('token', loggedUser.token);
+        }
+      })
+    }
+    else alert("Campos por preencher!");
   }
 
 }
