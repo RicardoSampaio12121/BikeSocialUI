@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       this.sub = this.service.login(this.newLogin).subscribe({
         next: loggedUser => {
           localStorage.setItem('token', loggedUser.token);
+          alert("Login efetuado com sucesso!");
           this.router.navigateByUrl("/profile")
         }
       })

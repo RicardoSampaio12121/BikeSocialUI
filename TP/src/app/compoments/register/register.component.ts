@@ -54,10 +54,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    // const dateAsString = (this.day + "-" + this.month + "-" + this.year)
-    // this.newUser.birthDate = new Date(dateAsString)
+    const dateAsString = (this.day + "-" + this.month + "-" + this.year)
+    this.newUser.birthdate = new Date(dateAsString)
 
-    this.newUser.birthdate = new Date()
+    //this.newUser.birthdate = new Date()
 
     console.log("UserType: " + this.newUser.userTypeId)
     console.log(JSON.stringify(this.newUser))
@@ -72,6 +72,7 @@ export class RegisterComponent implements OnInit {
         }
     })
    }
+   else alert("Campos por preencher");
   }
 
   teste() {
