@@ -1,14 +1,44 @@
 <div id="includeContent"></div>
-
 <div class="wrapper">
-    <div id="includeSideBar"></div>
+    <div id="includeSideBar">
+        
+        <!-- Sidebar  -->
+        <nav id="sidebar" style="height: 100%;">
+            <div class="sidebar-header">
+                <h3>Definições</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLink="/contadefinitions">
+                        <img src="/18827_ricardo_sampaio/Imagens/profileConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de conta</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de perfil</label>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/privacyDefinitions">
+                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de privacidade</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
     <!-- Page Content  -->
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <span>Colapsar</span>
-                </button>
                 <h1>Definições de conta</h1>
             </div>
         </nav>
@@ -68,7 +98,8 @@
                 <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <select class="form-control" name="genders" id="genders" [(ngModel)]="account.sex" (change)="changeSex()">
+                    <select class="form-control" name="genders" id="genders" [(ngModel)]="account.sex"
+                        (change)="changeSex()">
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
                         <option value="other">Outro</option>
@@ -76,7 +107,8 @@
                 </div>
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <input id="txtGender" class="form-control" type="text" placeholder="Outro..." [(ngModel)]="otherSex" [disabled]="otherDisabled">
+                    <input id="txtGender" class="form-control" type="text" placeholder="Outro..." [(ngModel)]="otherSex"
+                        [disabled]="otherDisabled">
                 </div>
             </div>
 
@@ -133,8 +165,7 @@
 
                 <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
                     <button id="btnSubmit" type="button" class="btn btn-primary btn-lg btn-sm btn-block"
-                        style="height: 35px;"
-                        (click)="updateAccountInformation()">
+                        style="height: 35px;" (click)="updateAccountInformation()">
                         Confirmar</button>
                 </div>
 

@@ -1,182 +1,216 @@
 <div id="includeContent"></div>
-    <div class="wrapper">
-        <div id="includeSideBar"></div>
-        <!-- Page Content  -->
-        <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <span>Colapsar</span>
-                    </button>
-                    <h1>Definições de conta</h1>
-                </div>
-            </nav>
+<div class="wrapper">
+    <div id="includeSideBar">
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <h3>Permissões de visibilidade</h3>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <h3>Permissões de comentarios</h3>
-                </div>
+        <!-- Sidebar  -->
+        <nav id="sidebar" style="height: 100%;">
+            <div class="sidebar-header">
+                <h3>Definições</h3>
+                <strong>BS</strong>
             </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLink="/contadefinitions">
+                        <img src="/18827_ricardo_sampaio/Imagens/profileConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de conta</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de perfil</label>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="privacyDefinitions">
+                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
+                            height="23px">
+                        <label style="color: black;">Definições de privacidade</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    <label>Publico</label>
-                </div>
+    </div>
+    <!-- Page Content  -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <h1>Definições de conta</h1>
+            </div>
+        </nav>
 
-                <div class="col-1">
-                    <input #rbPVPublic id="rbPVPublic" [(ngModel)]="cbPvPublic" type="checkbox"
-                        (change)="changeVisibilitySettings(1, $event)"
-                        >
-                        
-                            
-                </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+                <h3>Permissões de visibilidade</h3>
+            </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    Todos
-                </div>
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+                <h3>Permissões de comentarios</h3>
+            </div>
+        </div>
 
-                <div class="col-1">
-                    <input id="rbPCAll" [(ngModel)]="cbPcAll" type="checkbox" checked
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label>Publico</label>
+            </div>
+
+            <div class="col-1">
+                <input #rbPVPublic id="rbPVPublic" [(ngModel)]="cbPvPublic" type="checkbox"
+                    (change)="changeVisibilitySettings(1, $event)">
+
+
+            </div>
+
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                Todos
+            </div>
+
+            <div class="col-1">
+                <input id="rbPCAll" [(ngModel)]="cbPcAll" type="checkbox" checked
                     (change)="changeCommentsPermission(1)">
-                </div>
-
             </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+        </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    <label>Apenas amigos</label>
-                </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
-                <div class="col-1">
-                    <input #rbPVFriends id="rbPVFriends" [(ngModel)]="cbPvFriends" type="checkbox" 
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label>Apenas amigos</label>
+            </div>
+
+            <div class="col-1">
+                <input #rbPVFriends id="rbPVFriends" [(ngModel)]="cbPvFriends" type="checkbox"
                     (change)="changeVisibilitySettings(0, $event)">
-                </div>
+            </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    Apenas amigos
-                </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                Apenas amigos
+            </div>
 
-                <div class="col-1">
-                    <input id="rbPCFriends" [(ngModel)]="cbPcFriends" type="checkbox"
+            <div class="col-1">
+                <input id="rbPCFriends" [(ngModel)]="cbPcFriends" type="checkbox"
                     (change)="changeCommentsPermission(0)">
-                </div>
-
             </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+        </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    <label>Privado</label>
-                </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
 
-                <div class="col-1">
-                    <input #rbPVPrivate id="rbPVPrivate" [(ngModel)]="cbPvPrivate" type="checkbox"
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                <label>Privado</label>
+            </div>
+
+            <div class="col-1">
+                <input #rbPVPrivate id="rbPVPrivate" [(ngModel)]="cbPvPrivate" type="checkbox"
                     (change)="changeVisibilitySettings(-1, $event)">
-                </div>
+            </div>
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                    Privado
-                </div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
+                Privado
+            </div>
 
-                <div class="col-1">
-                    <input id="rbPCPrivate" [(ngModel)]="cbPcPrivate" type="checkbox"
+            <div class="col-1">
+                <input id="rbPCPrivate" [(ngModel)]="cbPcPrivate" type="checkbox"
                     (change)="changeCommentsPermission(-1)">
-                </div>
-
             </div>
 
-            <br>
-            <br>
+        </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
-                    <p style="font-size: 20px;">Permitir contacto de pessoas fora da lista de amigos</p>
-                </div>
-                <div class="col-1">
-                    <label class="switch">
-                        <input type="checkbox" [(ngModel)]="settings.unfriendContactPermission" (click)="unfriendContactChange()">
-                        <span class="slider round"></span>
-                    </label>
+        <br>
+        <br>
 
-                </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
+                <p style="font-size: 20px;">Permitir contacto de pessoas fora da lista de amigos</p>
+            </div>
+            <div class="col-1">
+                <label class="switch">
+                    <input type="checkbox" [(ngModel)]="settings.unfriendContactPermission"
+                        (click)="unfriendContactChange()">
+                    <span class="slider round"></span>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
+                <p style="font-size: 20px;">Permitir visualização de trofeus por pessoas fora da lista de amigos</p>
+            </div>
+            <div class="col-1">
+                <label class="switch">
+                    <input type="checkbox" [(ngModel)]="settings.unfriendTrodyVisualization"
+                        (click)="unfriendTrofyVisualizationChange()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
+                <p style="font-size: 20px;">Anonimizar atividade de treinos</p>
+            </div>
+            <div class="col-1">
+                <label class="switch">
+                    <span class="slider round"></span>>
+                    <input type="checkbox" [(ngModel)]="settings.privateTrainings" (click)="privateTrainingsChange()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
+                <p style="font-size: 20px;">Anonimizar atividade de provas</p>
+            </div>
+            <div class="col-1">
+                <label class="switch">
+                    <input type="checkbox" [(ngModel)]="settings.privateRaces" (click)="privateRacesChange()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+            <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
+                <p style="font-size: 20px;">Anonimizar atividade de percursos</p>
+            </div>
+            <div class="col-1">
+                <label class="switch">
+                    <input type="checkbox" [(ngModel)]="settings.privateRoutes" (click)="privateRoutesChange()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
+
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+                <button id="btnSubmit" (click)="updatePrivacySettings()" type="button"
+                    class="btn btn-primary btn-lg btn-sm btn-block" style="height: 35px;"> Confirmar
+                </button>
             </div>
 
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
-                    <p style="font-size: 20px;">Permitir visualização de trofeus por pessoas fora da lista de amigos</p>
-                </div>
-                <div class="col-1">
-                    <label class="switch">
-                        <input type="checkbox" [(ngModel)]="settings.unfriendTrodyVisualization" (click)="unfriendTrofyVisualizationChange()" >
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
-                    <p style="font-size: 20px;">Anonimizar atividade de treinos</p>
-                </div>
-                <div class="col-1">
-                    <label class="switch">
-                        <span class="slider round"></span>>
-                        <input type="checkbox" [(ngModel)]="settings.privateTrainings" (click)="privateTrainingsChange()">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
-                    <p style="font-size: 20px;">Anonimizar atividade de provas</p>
-                </div>
-                <div class="col-1">
-                    <label class="switch">
-                        <input type="checkbox" [(ngModel)]="settings.privateRaces" (click)="privateRacesChange()">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-11 col-11">
-                    <p style="font-size: 20px;">Anonimizar atividade de percursos</p>
-                </div>
-                <div class="col-1">
-                    <label class="switch">
-                        <input type="checkbox" [(ngModel)]="settings.privateRoutes" (click)="privateRoutesChange()">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-0 col-0"></div>
-                
-                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <button id="btnSubmit" (click)="updatePrivacySettings()" type="button" class="btn btn-primary btn-lg btn-sm btn-block" style="height: 35px;"> Confirmar
-                    </button>
-                    </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
-                    <button id="btnDeleteAccount" type="button" class="btn btn-primary btn-lg btn-sm btn-block" style="height: 35px; background-color: #b51414;"> Reverter
-                    </button>
-                    </div>
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+                <button id="btnDeleteAccount" type="button" class="btn btn-primary btn-lg btn-sm btn-block"
+                    style="height: 35px; background-color: #b51414;"> Reverter
+                </button>
             </div>
         </div>
     </div>
+</div>

@@ -262,7 +262,7 @@ a[data-toggle="collapse"] {
 }
 
 
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
     #sidebar {
         min-width: 80px;
         max-width: 80px;
@@ -309,4 +309,4 @@ a[data-toggle="collapse"] {
     #sidebarCollapse span {
         display: none;
     } 
-}*/
+}

@@ -23,6 +23,7 @@ export class AccountDefinitionsComponent implements OnInit {
   newPassword: string = ""
   confirmNewPassword: string = ""
 
+  
 
   constructor(private accountSettingsService: AccountDefinitionsService) { }
 
@@ -58,22 +59,18 @@ export class AccountDefinitionsComponent implements OnInit {
     }
     else if (this.password != this.confirmPassword) {
       //Mensagem de erro qualquer
-      console.log("Entra no if 2")
 
       return
     }
     else if (this.newPassword == "") {
-      console.log("Entra no if 3")
       this.toUpdate.newPassword = "nada"
     }
     else if (this.newPassword != this.confirmNewPassword) {
       //Mensagem de erro
-      console.log("Entra no if 4")
       
       return
     }
     else {
-      console.log("Entra no if 5")
 
       this.toUpdate.currentPassword = this.password
       this.toUpdate.newPassword = this.newPassword
@@ -81,27 +78,20 @@ export class AccountDefinitionsComponent implements OnInit {
 
     if (this.account.sex == "other") {
       console.log(this.otherSex)
-      console.log("Antes do nested if")
 
       if (this.otherSex == "Outro..." || this.otherSex == ""){
         //Mensagem de erro
-        console.log("Entra no nested if")
         return
       }
       this.toUpdate.sex = this.otherSex
     }
     else{
-      console.log("Entra no else")
       this.toUpdate.sex = this.account.sex
     }
 
     //Adicionar um Patter para ver se o email é válido
 
     this.toUpdate.newEmail = this.account.email
-
-    //console.log("Antes disto")
-
-    console.log(this.toUpdate)
 
     this.sub = this.accountSettingsService.updateAccountSettings(this.toUpdate).subscribe();
 
