@@ -102,7 +102,7 @@ export class CreateComponentR implements OnInit {
     console.log("-",this.createRace.lugar)
     console.log("-",this.createRace.state)
     console.log("-",this.createRace.FederationId)
-    console.log("-",this.createRace.RaceTypeId)
+    console.log("-typerace",this.createRace.RaceTypeId)
 
     let auxDate = new Date('');
     if((this.createRace.description =="" ||  this.createRace.distance == 0) && (this.createRace.estimatedTime == 0
@@ -119,7 +119,7 @@ export class CreateComponentR implements OnInit {
     this.CreateService.create(this.createRace).subscribe((race) => {
       console.log("Entrou na func")
       console.log("-",this.createRace);
-      alert("Inserido com sucesso!");
+      alert("Prova inserida com sucesso!");
     });
     }
 
