@@ -17,12 +17,16 @@ export class FriendListService {
     let token = localStorage.getItem('token') ?? '';
     return token;
   }
+
   getFriendList() : Observable<Friend[]>
   {
     let token = this._getToken();
-    let header = new HttpHeaders().set('Authorization', 'bearer ' + token);
-    console.log(header.get('Authorization'));
-    return this.http.get<Friend[]>(this.friendsEndpoint.concat("/view"), {headers: header});
+    const header = new HttpHeaders(
+      {
+        'Authorization': 'bearer ' + token
+      }
+    );
+    return this.http.get<Friend[]>(this.friendsEndpoint.concat("/view"),{headers: header});
   }
 
   addFriend() : boolean

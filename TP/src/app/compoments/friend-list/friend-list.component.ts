@@ -16,9 +16,9 @@ export class FriendListComponent implements OnInit {
   constructor(private friendService : FriendListService) { }
 
   ngOnInit(): void {
-    let token = localStorage.getItem("token" as string);
-    let decodedToken = token;
-
+    let token = localStorage.getItem("token" as string) ?? '';
+    let decodedToken = jwtDecode(token);
+    console.log(decodedToken);
     this.friendService.getFriendList().subscribe(
       friendList => {
         friendList.forEach(friend => {
