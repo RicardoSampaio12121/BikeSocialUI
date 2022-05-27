@@ -13,9 +13,14 @@ import { Observable } from "rxjs";
 export class AuthInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         
-    const token = localStorage.getItem('token')
 
-    const authRequest = request.clone({headers: request.headers.set('Authorization', 'Bearer ' + token)});
+    const authRequest = request.clone({headers: request.headers.set('Authorization', 'Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6ImV4ZW1wbG8xNEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImNvYWNoIiwiZXhwIjoxNjUzNjc5NTUzfQ.TaurlSAbeoJtM6XDHvHBkf_BZ94yRZ-J1pxDclMb0juEQMgSxsjPXMksCvhzVQNXgc9w7xeDqgisf25aH_VYaw')});
+
+  
+    //const token = localStorage.getItem('token')
+
+   //const authRequest = request.clone({headers: request.headers.set('Authorization', 'Bearer ' + token)});
+
         return next.handle(authRequest)
     }
 

@@ -13,12 +13,14 @@ style="margin-top: 3rem;">
 <!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
         <div>
             <p class="escolher_prova">
-            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" [(ngModel)]= "trainingTypeString" (change)="changeTrainingType()" required> <!-- required -->>
             <option hidden disabled selected value>Selecione</option>
-            <option value="Estrada">Estrada</option>
-            <option value="Pista">Pista</option>
-            <option value="Montanha">Montanha</option>
-            <option value="BMX">BMX</option>
+            <option value="Subidas">Subidas</option>
+            <option value="Descanso ativo">Descanso ativo</option>
+            <option value="Sprints">Sprints</option>
+            <option value="Intervalado">Intervalado</option>
+            <option value="Endurance">Endurance</option>
+            <option value="Rotação">Rotação</option>
             </select>
             </p>
         </div>
@@ -30,19 +32,23 @@ style="margin-top: 3rem;">
     <div class="NLD alinhar-horizontal">
         <div class="nome alinhar-vertical"> 
            <label  for="fname">*Nome</label>
-            <input class="nome1" type="text" id="fname" name="fname" required/>
+            <input class="nome1" type="text" id="fname" name="fname" [(ngModel)]= "createTraining.name" required/>
             
         </div>
         <div class="localidade alinhar-vertical"> 
             <label for="fname">*Data/ Inicio: </label>
-            <input class="data1" type="datetime-local" id="fname" name="fname" required/>
+
+            <input class="data1" type="datetime-local" id="fname" name="fname" [(ngModel)]= "createTraining.dateTime" required/>
+
         </div>
         
         <div class="alinhar-vertical">
             
             <label class="distancia"> *Distância:</label>
             <div>
-                <input class="distancia1" type="number" min="0" id="fname" name="fname" required/>
+
+                <input class="distancia1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "createTraining.distance" required/>
+
                 <label class="km">km</label>
             </div>
             
@@ -51,7 +57,9 @@ style="margin-top: 3rem;">
         <div class="alinhar-vertical"> 
             <label class="tempo">*Tempo previsto: </label>
             <div>
-                <input class="tempo1" type="number" id="fname" name="fname" required/> 
+
+                <input class="tempo1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "createTraining.estimatedTime" required/> 
+
                 <label class="h">h</label> 
             </div>  
         </div>
@@ -63,34 +71,40 @@ style="margin-top: 3rem;">
     <div class="DT alinhar-horizontal">
         <div class="localidade alinhar-vertical"> 
             <label class="localidade" for="fname">*Cidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+
+            <input class="localidade1" type="text" id="fname" name="fname"  [(ngModel)]= "local.cidade"  required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Localidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.localidade" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Lugar</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.lugar" required/>
+
         </div>
         
     </div>
 
     <!-- Parte do Incio -->
-    <div class="alinhar-horizontal"> 
+
+   <!--  <div class="alinhar-horizontal"> 
+
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Federação</label>
             <input class="localidade1" type="text" id="fname" name="fname"/>
         </div>
         
-    </div>
+
+    </div> -->
+
 <!-- Parte da descrição -->
     <div class="alinhar-horizontal"> 
-        <div class="descricao alinhar-vertical"> 
+        <!-- <div class="descricao alinhar-vertical"> 
             <label  for="fname">Estado: </label>
              <input class="descricao2" type="text" id="fname" name="fname"/>
-         </div>
-         <button class="criar" >
+         </div> -->
+         <button class="criar" (click)="createTRAINING()">
             Criar
         </button>
     </div>

@@ -11,12 +11,11 @@ style="margin-top: 3rem;">
 <!--provas em estradas, provas em pistas, provas de montanha (Mountain Bike ou MTB) e BMX -->
         <div>
             <p class="escolher_prova">
-            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" required> <!-- required -->>
+            <select class="scroll" id="prova" name="tipo_prova" placeholder="Selecione" [(ngModel)]="raceTypeString" (change)="changeRaceyType()" required> <!-- required -->>
             <option hidden disabled selected value>Selecione</option>
             <option value="Estrada">Estrada</option>
-            <option value="Pista">Pista</option>
-            <option value="Montanha">Montanha</option>
-            <option value="BMX">BMX</option>
+            <option value="Monte">Monte</option>
+            <option value="Misto">Misto</option>
             </select>
             </p>
         </div>
@@ -28,18 +27,22 @@ style="margin-top: 3rem;">
     <div class="NLD alinhar-horizontal">
         <div class="nome alinhar-vertical"> 
            <label  for="fname">*Nome</label>
-            <input  class="nome1" type="text" id="fname" name="nome" aria-describedby="nome"  required/>
+
+            <input  class="nome1" type="text" id="fname" name="nome" aria-describedby="nome" [(ngModel)]= "criarRace.nome" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label for="fname">*Data/ Inicio: </label>
-            <input class="data1" type="datetime-local" id="fname" name="fname" required/>
+            <input class="data1" type="datetime-local" id="fname" name="fname" [(ngModel)]= "criarRace.dataInicio" required/>
+
         </div>
         
         <div class="alinhar-vertical">
             
             <label class="distancia"> *Distância:</label>
             <div>
-                <input class="distancia1" type="number" min="0" id="fname" name="fname" required/>
+
+                <input class="distancia1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "criarRace.distancia" required/>
+
                 <label class="km">km</label>
             </div>
             
@@ -48,7 +51,9 @@ style="margin-top: 3rem;">
         <div class="alinhar-vertical"> 
             <label class="tempo">*Tempo previsto: </label>
             <div>
-                <input class="tempo1" type="number" id="fname" name="fname" required/> 
+
+                <input class="tempo1" type="number" min="0" id="fname" name="fname" [(ngModel)]= "criarRace.tempoPre" required/> 
+
                 <label class="h">h</label> 
             </div>  
         </div>
@@ -60,15 +65,17 @@ style="margin-top: 3rem;">
     <div class="DT alinhar-horizontal">
         <div class="localidade alinhar-vertical"> 
             <label class="localidade" for="fname">*Cidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)]= "local.cidade" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Localidade</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.localidade" required/>
         </div>
         <div class="localidade alinhar-vertical"> 
             <label  for="fname">*Lugar</label>
-            <input class="localidade1" type="text" id="fname" name="fname" required/>
+            <input class="localidade1" type="text" id="fname" name="fname" [(ngModel)] = "local.lugar" required/>
+
         </div>
         
     </div>
@@ -76,8 +83,14 @@ style="margin-top: 3rem;">
     <!-- Parte do Incio -->
     <div class="alinhar-horizontal"> 
         <div class="localidade alinhar-vertical"> 
-            <label  for="fname">*Federação</label>
-            <input class="localidade1" type="text" id="fname" name="fname"/>
+
+            <label  for="fname">*Federação</label>  
+
+            <select [(ngModel)]="federacaoString" (change)="changeFederation()" > 
+                <option *ngFor="let n of fede" [attr.value]="n.name" [attr.selected]="">{{n.name}}</option>
+              </select>
+            
+
         </div>
         
     </div>
@@ -85,35 +98,13 @@ style="margin-top: 3rem;">
     <div class="alinhar-horizontal"> 
         <div class="descricao alinhar-vertical"> 
             <label  for="fname">Estado: </label>
-             <input class="descricao2" type="text" id="fname" name="fname"/>
+             <input class="descricao2" type="text" id="fname" name="fname" [(ngModel)] = "criarRace.estado" />
          </div>
-         <button class="criar" >
+         <button class="criar" (click)="createRACE()" >
             Criar
         </button>
     </div>
 
-<!-- Parte para enviar convites -->
-<!--     <div class="convites alinhar-horizontal">
-        <p class="convite" >Enviar convites para:</p>
-    </div>
-    <div class="convites alinhar-horizontal">
-        <div class="alinhar-vertical" > 
-           <div > 
-                <input  type="checkbox" id="one" /> 
-                <label class="conviteEquipa ">Equipas</label>
-            </div>
-            <div class="conviteAtleta">
-                <input type="checkbox" id="two" /> 
-                <label> Atletas</label>
-            </div>
-        </div>
-    </div>
- -->
-<!-- Botao criar  -->
 
- 
-        
-
-    
     
 </div>
