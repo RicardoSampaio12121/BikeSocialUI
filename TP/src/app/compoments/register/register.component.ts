@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscriber, Subscription } from 'rxjs';
 import { INewUser } from './newUser';
 import { registerService } from './register-service';
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
 
   userTypeInText: string = "";
 
-  constructor(private service: registerService) { }
+  constructor(private service: registerService,
+              private router: Router) { }
 
 
   ngOnInit(): void {
@@ -52,21 +54,18 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    // const dateAsString = (this.day + "-" + this.month + "-" + this.year)
-    // this.newUser.birthDate = new Date(dateAsString)
+    const dateAsString = (this.day + "-" + this.month + "-" + this.year)
+    this.newUser.birthdate = new Date(dateAsString)
 
-    this.newUser.birthdate = new Date()
-
-    console.log("UserType: " + this.newUser.userTypeId)
-    console.log(JSON.stringify(this.newUser))
+    //this.newUser.birthdate = new Date()
 
     if (this.day != "" && this.month != "" && this.year != "" && this.newUser.email != "" && this.newUser.password != "" && 
         this.newUser.sex != "" && this.newUser.userTypeId != 0 && this.newUser.username != "")
     {
       this.sub = this.service.registerUser(this.newUser).subscribe({
         next: createdUser => {
-          console.log("Coiso coisado")
           alert("Utilizador criado com sucesso!");
+          this.router.navigate(['/login'])
         }
       })
     }
