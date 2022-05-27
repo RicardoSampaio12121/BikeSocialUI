@@ -22,12 +22,16 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    this.sub = this.service.login(this.newLogin).subscribe({
-      next: loggedUser => {
-        localStorage.setItem('token', loggedUser.token);
-        this.router.navigateByUrl("/profile")
-      }
-    })
+    if (this.newLogin.email != "" && this.newLogin.password != "")
+    {
+      this.sub = this.service.login(this.newLogin).subscribe({
+        next: loggedUser => {
+          localStorage.setItem('token', loggedUser.token);
+          this.router.navigateByUrl("/profile")
+        }
+      })
+    }
+    else alert("Campos por preencher!");
   }
-
+  
 }
