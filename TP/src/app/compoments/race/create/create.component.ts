@@ -15,7 +15,7 @@ export class CreateComponentR implements OnInit {
 
   criarRace: CreateRace = {
     nome: '',
-    dataInicio: new Date(),
+    dataInicio: new Date(''),
     distancia: 0,
     tempoPre: 0,
     estado: ''
@@ -25,7 +25,7 @@ export class CreateComponentR implements OnInit {
     description: "", 
     distance: 0, 
     estimatedTime: 0, 
-    dateTime: new Date(), 
+    dateTime: new Date(''), 
     FederationId: 0, 
     RaceTypeId: 0, 
     localidade: "", 
@@ -80,6 +80,7 @@ export class CreateComponentR implements OnInit {
     //   alert("sucesso ");
     // });
 
+
     this.createRace.description = this.criarRace.nome;
     this.createRace.distance = this.criarRace.distancia;
     this.createRace.estimatedTime = this.criarRace.tempoPre;
@@ -87,11 +88,44 @@ export class CreateComponentR implements OnInit {
     this.createRace.localidade = this.local.localidade;
     this.createRace.cidade = this.local.cidade;
     this.createRace.lugar = this.local.lugar;
-    this.createRace.state = "Open";
+    this.createRace.state = this.criarRace.estado;
+    
 
+    console.log("--------------------------------------------");
+
+    console.log("-",this.createRace.description);
+    console.log("-",this.createRace.distance)
+    console.log("-",this.createRace.estimatedTime)
+    console.log("-",this.createRace.dateTime)
+    console.log("-",this.createRace.localidade);
+    console.log("-",this.createRace.cidade)
+    console.log("-",this.createRace.lugar)
+    console.log("-",this.createRace.state)
+    console.log("-",this.createRace.FederationId)
+    console.log("-",this.createRace.RaceTypeId)
+
+    let auxDate = new Date('');
+    if((this.createRace.description =="" ||  this.createRace.distance == 0) && (this.createRace.estimatedTime == 0
+      || this.createRace.dateTime == auxDate)  && (this.createRace.localidade == "" || this.createRace.cidade == "") 
+      || (this.createRace.lugar == "" && this.createRace.state == "") && (this.createRace.FederationId == 0 
+        || this.createRace.RaceTypeId == 0))
+        { 
+          console.log("vazio");
+          alert("prencher todos os campo");
+        }
+    else{
+    console.log("----");
+    console.log("-",this.createRace);
     this.CreateService.create(this.createRace).subscribe((race) => {
       console.log("Entrou na func")
+      console.log("-",this.createRace);
+      alert("Inserido com sucesso!");
     });
+    }
+
+    /* this.CreateService.create(this.createRace).subscribe((race) => {
+      console.log("Entrou na func")
+    }); */
   }
 
   getFederations(){

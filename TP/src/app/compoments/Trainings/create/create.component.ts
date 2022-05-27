@@ -67,6 +67,7 @@ export class CreateComponent implements OnInit {
 
     this.CreateService2.create(this.createTraining).subscribe((training) =>{
       console.log("training")
+      alert("Inserido com sucesso");
     })
   }
 
