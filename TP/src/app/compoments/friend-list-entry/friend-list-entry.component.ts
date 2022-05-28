@@ -12,7 +12,7 @@ export class FriendListEntryComponent implements OnInit {
 
   @Input() friend? : Friend;
   @Input() profileViewing : number;
-  friendInfo : User;
+  friendInfo : User = {} as User;
   isPending : boolean;
 
   constructor(private userService : UserService) {

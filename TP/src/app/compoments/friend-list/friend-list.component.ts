@@ -21,7 +21,6 @@ export class FriendListComponent implements OnInit {
     let decodedToken = jwtDecode(token);
     this.friendService.getFriendList(this.profileViewing).subscribe(
       friendList => {
-        console.log(friendList);
         friendList.forEach(friend => {
           if(friend.status)
           {

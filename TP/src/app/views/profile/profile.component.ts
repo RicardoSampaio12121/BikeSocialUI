@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import jwt_decode from "jwt-decode";
 import { ProfileService } from 'src/app/services/profile.service';
 import { Race } from 'src/app/services/race';
@@ -17,17 +17,20 @@ export class ProfileComponent implements OnInit {
 
   isFederationFunc = false;
   isAthlete = false;
-  profileUser : User;
-  profileInfo : Profile;
+  profileUser : User = {} as User;
+  profileInfo : Profile = {} as Profile;
   raceList : Race[];
+  profileRoute: number;
 
-  constructor(private router: Router, private userService: UserService, private profileService: ProfileService, private raceService: RaceService) { 
+  constructor(private route: ActivatedRoute, private router: Router, private userService: UserService, private profileService: ProfileService, private raceService: RaceService) { 
+    const routeParams = this.route.snapshot.paramMap;
+    this.profileRoute = Number(routeParams.get('userId'));
     var userToken : string = localStorage.getItem("token") ?? '';
     var decodedToken : any = jwt_decode(userToken as string);
     //Verificar se user está autenticado
     if(userToken != '')
     {
-      this.userService.getUser(0).subscribe( userObtained => {
+      this.userService.getUser(this.profileRoute).subscribe( userObtained => {
         this.profileUser = userObtained;
 
         this.profileService.getProfile(this.profileUser.id).subscribe(profileObtained =>
@@ -58,6 +61,6 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 }

@@ -44,7 +44,7 @@ import { InvitesComponentR } from './compoments/race/invites/invites.component';
     ProfileComponent,
     FriendListEntryComponent,
     PostCardComponent,
-
+    InvitesComponentR,
     CreateComponentR,
 
     LoginComponent,
