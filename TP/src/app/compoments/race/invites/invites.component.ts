@@ -14,15 +14,23 @@ export class InvitesComponentR implements OnInit {
 
   races: Array<IAvailableRaces>
 
+  raceToCheck: String = ""
+
   constructor(private raceInvService: RaceInvitesService) { }
 
   ngOnInit(): void {
     this.sub = this.raceInvService.getRacesInformation().subscribe({
       next: races => {
         this.races = races
-        console.log("abc",this.races)
+        console.log(this.races)
       }
     })
+  }
+
+  changeCheckBox(raceDesc: String) {
+    // Isto está feito à trolha
+    if(raceDesc == this.raceToCheck) this.raceToCheck = ""
+    else this.raceToCheck = raceDesc
   }
 
 }

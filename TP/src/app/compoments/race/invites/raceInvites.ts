@@ -1,14 +1,14 @@
 export interface IAvailableRaces{
-    Description: string,
-    Distance: number,
-    EstimatedTime: number,
+    description: string,
+    distance: number,
+    estimatedTime: number,
     date: string,
     time: string,
-    Federation: string,
-    RaceType: string,
-    City: string,
-    Town: string,
-    PlaceName: string
+    federation: string,
+    raceType: string,
+    city: string,
+    town: string,
+    placeName: string
 }
 /*
 export interface IInviteRace{

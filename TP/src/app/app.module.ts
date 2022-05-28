@@ -25,6 +25,7 @@ import { CreateComponentR } from './compoments/race/create/create.component';
 import { RegisterComponent } from './compoments/register/register.component';
 import { LoginComponent } from './compoments/login/login.component';
 import { FriendListComponent } from './compoments/friend-list/friend-list.component';
+import { InvitesComponentR } from './compoments/race/invites/invites.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { FriendListComponent } from './compoments/friend-list/friend-list.compon
     NavComponent,
     HomeComponent,
     InvitesComponent,
+    InvitesComponentR,
     AccountDefinitionsComponent,
     PrivacyDefinitionsComponent,
     HeaderComponent,
