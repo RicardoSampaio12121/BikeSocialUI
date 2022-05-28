@@ -7,6 +7,7 @@ import { CreateRace, CreateRaceA, Federacao, Localidade } from './createRace.mod
   providedIn: 'root'
 })
 export class CreateService {
+  private asd = "https://localhost:7239/"
   private baseUrl =  "https://localhost:7239/race/"
   private federationDefaultUrl = "https://localhost:7239/federation/"
   private get = "GetRace"
@@ -28,11 +29,11 @@ export class CreateService {
   }
 
   addRace(data:any) {
-    return this.http.post(this.baseUrl + 'race/create', data);
+    return this.http.post(this.asd + 'race/create', data);
   }
 
   createLocalidade(createL: Localidade): Observable<Localidade>{
-    return this.http.post<Localidade>(this.baseUrl + `athlete/createPlace`, createL);
+    return this.http.post<Localidade>(this.asd + `athlete/createPlace`, createL);
   }
 
   /* updateRace(id:number, data:any) {

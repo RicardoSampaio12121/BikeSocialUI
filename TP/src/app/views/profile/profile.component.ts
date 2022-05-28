@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from "jwt-decode";
 import { ProfileService } from 'src/app/services/profile.service';
+import { Race } from 'src/app/services/race';
+import { RaceService } from 'src/app/services/race.service';
 import { User } from 'src/app/services/user';
 import { UserService } from 'src/app/services/user.service';
 import { Profile } from './profile';
@@ -17,8 +19,9 @@ export class ProfileComponent implements OnInit {
   isAthlete = false;
   profileUser : User;
   profileInfo : Profile;
+  raceList : Race[];
 
-  constructor(private router: Router, private userService: UserService, private profileService: ProfileService) { 
+  constructor(private router: Router, private userService: UserService, private profileService: ProfileService, private raceService: RaceService) { 
     var userToken : string = localStorage.getItem("token") ?? '';
     var decodedToken : any = jwt_decode(userToken as string);
     //Verificar se user está autenticado
@@ -33,6 +36,11 @@ export class ProfileComponent implements OnInit {
           });
       });
 
+      this.raceService.getRaces().subscribe(racesObtained => {
+        console.log(racesObtained);
+        this.raceList = racesObtained;
+        console.log(this.raceList)
+      })
       
       //Verificar tipo de user, e alterar o acesso a certos links de acordo.
       if(decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] == 'federationFunc')
@@ -43,6 +51,7 @@ export class ProfileComponent implements OnInit {
       {
         this.isAthlete = true;
       }
+      
     } 
     else
       this.router.navigateByUrl("/login");

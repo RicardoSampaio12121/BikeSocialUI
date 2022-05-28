@@ -9,43 +9,7 @@
                     <hr>
                     <p class='card-text'>{{this.profileInfo.description}}</p>
                 </div>
-            </div>
-            <div class='card'>
-                <div class='card-header'>
-                    <h5 class='card-title center'>Proezas</h5>
-                </div>
-                <div class='card-body'>
-                    <div class='center'>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <a href='#' class='btn btn-primary'>View all</a>
-                </div>
-            </div>
-            <div class='card'>
-                <div class='card-header'>
-                    <h5 class='card-title center'>Prémios</h5>
-                </div>
-                <div class='card-body'>
-                    <div class='center'>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                        <span class='round-profile-picture-small ' style='margin-left: 10px'></span>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <a href='#' class='btn btn-primary'>View all</a>
-                </div>
-            </div>
+            </div>            
         </div>
         <div class='mainContent'>
             <div class='card'>
@@ -58,11 +22,9 @@
                 </div>     
             </div>
             Provas
-            <app-post-card [isImagePost]="true"></app-post-card>
-            <app-post-card [isImagePost]="false"></app-post-card>
-            <app-post-card [isImagePost]="false"></app-post-card>
-            <app-post-card [isImagePost]="false"></app-post-card>
+            <app-post-card *ngFor="let race of raceList" [race]="race" [isImagePost]="true" ></app-post-card>
             Treinos
+            <app-post-card></app-post-card>
         </div>
         <div class='rightSpace'>
             <app-friend-list [profileViewing]="this.profileUser.id"></app-friend-list>
