@@ -4,10 +4,11 @@
         <div class='leftSpace'>
             <div class='card'>
                 <div class='card-body'>
-                    <span class='round-profile-picture-large center' style='margin-bottom: 10px'></span>
                     <h5 class='card-title center'>{{this.profileUser.username}}</h5>
                     <hr>
                     <p class='card-text'>{{this.profileInfo.description}}</p>
+                    <p class='card-text'>Nascido em {{this.profileUser.birthDate}}</p>
+                    <p class="card-text">E-Mail: {{this.profileUser.email}}</p>
                 </div>
             </div>            
         </div>
@@ -23,14 +24,8 @@
             </div>
             Provas
             <app-post-card *ngFor="let race of raceList" [race]="race" [isImagePost]="true" ></app-post-card>
-            Treinos
-            <app-post-card></app-post-card>
         </div>
         <div class='rightSpace'>
             <app-friend-list [profileViewing]="this.profileUser.id"></app-friend-list>
         </div>
     </div>
-    <script src='https://unpkg.com/feather-icons'></script> 
-    <script>
-        feather.replace()
-    </script>

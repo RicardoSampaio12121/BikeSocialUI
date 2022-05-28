@@ -2,7 +2,7 @@ export interface User
 {
     id : number,
     username : string,
-    birthdate: string,
+    birthDate: string,
     contact: number,
     placeId: number,
     userTypeId: number,
