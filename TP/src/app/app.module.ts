@@ -24,6 +24,7 @@ import { CreateComponentR } from './compoments/race/create/create.component';
 
 import { RegisterComponent } from './compoments/register/register.component';
 import { LoginComponent } from './compoments/login/login.component';
+import { FriendListComponent } from './compoments/friend-list/friend-list.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { LoginComponent } from './compoments/login/login.component';
 
     LoginComponent,
     RegisterComponent,
+    FriendListComponent,
 
   ],
   imports: [
