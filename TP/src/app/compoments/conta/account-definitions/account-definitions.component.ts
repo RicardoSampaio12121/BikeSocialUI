@@ -16,7 +16,7 @@ export class AccountDefinitionsComponent implements OnInit {
   account: IAccountSettings = { name: "", email: "", sex: "", password: "" }
 
   toUpdate: IUpdateAccountSettings = { currentPassword: "", newPassword: "", newEmail: "", sex: "" }
-
+ 
   otherDisabled: boolean
   otherSex: string = ""
   password: string = ""
