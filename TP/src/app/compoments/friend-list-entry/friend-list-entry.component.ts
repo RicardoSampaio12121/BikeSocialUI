@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendListEntryComponent implements OnInit {
 
+  friendId : number;
+  isPending : boolean;
+  
   constructor() { }
 
   ngOnInit(): void {

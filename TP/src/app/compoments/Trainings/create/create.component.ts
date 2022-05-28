@@ -65,9 +65,36 @@ export class CreateComponent implements OnInit {
     this.createTraining.cidade = this.local.cidade;
     this.createTraining.lugar = this.local.lugar;
 
-    this.CreateService2.create(this.createTraining).subscribe((training) =>{
+
+
+    let auxDate = new Date('');
+
+    if(this.createTraining.name == "" ||
+      this.createTraining.dateTime == new Date ||
+      this.createTraining.estimatedTime == 0 ||
+      this.createTraining.cidade == "" ||
+      this.createTraining.localidade == "" ||
+      this.createTraining.lugar == "" ||
+      this.createTraining.trainingTypeId == 0 ||
+      this.createTraining.distance == 0)
+      {
+        console.log("vazio");
+          alert("Prencher todos os campos");
+      }
+      else{
+        this.CreateService2.create(this.createTraining).subscribe((training) =>{
+          console.log("training")
+          alert("Treino inserido com sucesso");
+        });
+
+      }
+
+
+
+   /*  this.CreateService2.create(this.createTraining).subscribe((training) =>{
       console.log("training")
-    })
+      alert("Inserido com sucesso");
+    }); */
   }
 
 }
