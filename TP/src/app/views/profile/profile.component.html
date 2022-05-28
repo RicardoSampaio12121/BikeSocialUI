@@ -53,8 +53,8 @@
                     <h5 class='card-title'>O que pertende fazer?</h5>
                 </div>
                 <div class='card-footer'>
-                    <a routerLink="/createrace" class='btn btn-primary' [ngStyle]="{'margin-right.px' : 20}">Criar Prova</a>
-                    <a routerLink="/createtraining" class='btn btn-primary'>Criar Treino</a>
+                    <a routerLink="/createrace" *ngIf="isFederationFunc" class='btn btn-primary' [ngStyle]="{'margin-right.px' : 20}">Criar Prova</a>
+                    <a routerLink="/createtraining" *ngIf="isAthlete" class='btn btn-primary'>Criar Treino</a>
                 </div>     
             </div>
             Provas

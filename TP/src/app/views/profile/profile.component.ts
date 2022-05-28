@@ -9,17 +9,28 @@ import jwt_decode from "jwt-decode";
 })
 export class ProfileComponent implements OnInit {
 
+  isFederationFunc = false;
+  isAthlete = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     var userToken : string = localStorage.getItem("token") ?? '';
-
+    var decodedToken : any = jwt_decode(userToken as string);
     //Verificar se user está autenticado
     if(userToken != '')
-      var decodedToken = jwt_decode(userToken as string);
+    {
+      //Verificar tipo de user, e alterar o acesso a certos links de acordo.
+      if(decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] == 'federationFunc')
+      {
+        this.isFederationFunc = true;
+      }
+      else if(decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] == 'athlete')
+      {
+        this.isAthlete = true;
+      }
+    } 
     else
       this.router.navigateByUrl("/login");
-
-    //Verificar tipo de user, e alterar o acesso a certos links de acordo.
   }
 }
