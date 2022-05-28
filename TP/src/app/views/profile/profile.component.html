@@ -26,6 +26,6 @@
             <app-post-card *ngFor="let race of raceList" [race]="race" [isImagePost]="true" ></app-post-card>
         </div>
         <div class='rightSpace'>
-            <app-friend-list [profileViewing]="this.profileUser.id"></app-friend-list>
+            <app-friend-list [profileViewing]="this.profileRoute"></app-friend-list>
         </div>
     </div>
