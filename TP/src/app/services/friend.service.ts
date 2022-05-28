@@ -18,15 +18,10 @@ export class FriendListService {
     return token;
   }
 
-  getFriendList() : Observable<Friend[]>
+  getFriendList(userId : number) : Observable<Friend[]>
   {
     let token = this._getToken();
-    const header = new HttpHeaders(
-      {
-        'Authorization': 'bearer ' + token
-      }
-    );
-    return this.http.get<Friend[]>(this.friendsEndpoint.concat("/view"),{headers: header});
+    return this.http.get<Friend[]>(this.friendsEndpoint.concat("/view/" + userId.toString()));
   }
 
   addFriend() : boolean

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/services/user';
+import { UserService } from 'src/app/services/user.service';
+import { Friend } from '../friend-list/friend';
 
 @Component({
   selector: 'app-friend-list-entry',
@@ -7,12 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendListEntryComponent implements OnInit {
 
-  friendId : number;
+  @Input() friend? : Friend;
+  @Input() profileViewing : number;
+  friendInfo : User;
   isPending : boolean;
-  
-  constructor() { }
+
+  constructor(private userService : UserService) {
+    
+  }
 
   ngOnInit(): void {
+    if(this.friend?.solicitorId == this.profileViewing)
+    {
+      this.userService.getUser(this.friend?.receiptientId as number).subscribe(
+        friendObtained =>
+        {
+          console.log(friendObtained);
+          this.friendInfo = friendObtained;
+        }
+      )
+    }
+    else if(this.friend?.receiptientId == this.profileViewing)
+    {
+      this.userService.getUser(this.friend.solicitorId).subscribe(
+        friendObtained=>
+        {
+          console.log(friendObtained);
+          this.friendInfo = friendObtained;
+        }
+      )
+    }
   }
 
 }

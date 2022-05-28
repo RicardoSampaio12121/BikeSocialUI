@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 import { Friend } from './friend';
 import { FriendListService } from '../../services/friend.service';
@@ -10,17 +10,18 @@ import { FriendListService } from '../../services/friend.service';
 })
 export class FriendListComponent implements OnInit {
 
-  friends : Friend[];
-  pendingFriends : Friend[];
+  friends : Friend[] = [];
+  pendingFriends : Friend[] = [];
+  @Input() profileViewing : number;
 
   constructor(private friendService : FriendListService) { }
 
   ngOnInit(): void {
     let token = localStorage.getItem("token" as string) ?? '';
     let decodedToken = jwtDecode(token);
-    console.log(decodedToken);
-    this.friendService.getFriendList().subscribe(
+    this.friendService.getFriendList(this.profileViewing).subscribe(
       friendList => {
+        console.log(friendList);
         friendList.forEach(friend => {
           if(friend.status)
           {
@@ -34,5 +35,4 @@ export class FriendListComponent implements OnInit {
       }
     );
   }
-
 }

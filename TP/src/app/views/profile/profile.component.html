@@ -5,9 +5,9 @@
             <div class='card'>
                 <div class='card-body'>
                     <span class='round-profile-picture-large center' style='margin-bottom: 10px'></span>
-                    <h5 class='card-title center'>José Seila</h5>
+                    <h5 class='card-title center'>{{this.profileUser.username}}</h5>
                     <hr>
-                    <p class='card-text'>Descrição do perfil</p>
+                    <p class='card-text'>{{this.profileInfo.description}}</p>
                 </div>
             </div>
             <div class='card'>
@@ -65,7 +65,7 @@
             Treinos
         </div>
         <div class='rightSpace'>
-            <app-friend-list></app-friend-list>
+            <app-friend-list [profileViewing]="this.profileUser.id"></app-friend-list>
         </div>
     </div>
     <script src='https://unpkg.com/feather-icons'></script> 

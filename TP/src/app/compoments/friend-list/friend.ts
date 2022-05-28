@@ -1,6 +1,6 @@
 export interface Friend{
     solicitorId : number,
-    recieptientId : number,
+    receiptientId : number,
     status: boolean,
     timeSent: Date
 }
