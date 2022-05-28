@@ -14,6 +14,7 @@ export class AccountDefinitionsComponent implements OnInit {
   errorMessage = '';
 
   account: IAccountSettings = { name: "", email: "", sex: "", password: "" }
+
   toUpdate: IUpdateAccountSettings = { currentPassword: "", newPassword: "", newEmail: "", sex: "" }
 
   otherDisabled: boolean
@@ -23,7 +24,6 @@ export class AccountDefinitionsComponent implements OnInit {
   newPassword: string = ""
   confirmNewPassword: string = ""
 
-  
 
   constructor(private accountSettingsService: AccountDefinitionsService) { }
 
@@ -50,35 +50,26 @@ export class AccountDefinitionsComponent implements OnInit {
   }
 
   updateAccountInformation() {
-    //console.log("Entrou aqui")
-
-    console.log(this.password)
-
     if (this.password == "") {
       this.toUpdate.newPassword = "nada"
     }
     else if (this.password != this.confirmPassword) {
-      //Mensagem de erro qualquer
-
+      alert("Passwords não coincidem")
       return
     }
     else if (this.newPassword == "") {
       this.toUpdate.newPassword = "nada"
     }
     else if (this.newPassword != this.confirmNewPassword) {
-      //Mensagem de erro
-      
+      alert("Passwords não coincidem")
       return
     }
     else {
-
       this.toUpdate.currentPassword = this.password
       this.toUpdate.newPassword = this.newPassword
     }
 
     if (this.account.sex == "other") {
-      console.log(this.otherSex)
-
       if (this.otherSex == "Outro..." || this.otherSex == ""){
         //Mensagem de erro
         return
@@ -89,15 +80,29 @@ export class AccountDefinitionsComponent implements OnInit {
       this.toUpdate.sex = this.account.sex
     }
 
-    //Adicionar um Patter para ver se o email é válido
-
     this.toUpdate.newEmail = this.account.email
-
-    this.sub = this.accountSettingsService.updateAccountSettings(this.toUpdate).subscribe();
-
-
+    
+    this.sub = this.accountSettingsService.updateAccountSettings(this.toUpdate).subscribe(
+      (response) => {
+        alert("Atualizado com sucesso.")
+      },
+      (error) => {
+        alert("Password errada.")
+      }
+    )
   }
 
-
-
+  revertChanges() {
+    this.sub = this.accountSettingsService.getAccountSettings().subscribe({
+      next: accountSettings => {
+        this.account = accountSettings;
+        if (this.account.sex == "feminino" || this.account.sex == "masculino") this.otherDisabled = true
+        else{
+          
+          this.otherSex = this.account.sex
+          this.otherDisabled = false
+        }
+      }
+    })
+  }
 }

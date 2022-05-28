@@ -14,8 +14,6 @@ import { IPrivacySettings } from './privacySettings';
   styleUrls: ['./privacy-definitions.component.css']
 })
 export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
-
-
   @ViewChild('rbPVPublic') PVPublic: HTMLInputElement
   @ViewChild('rbPVFriends') PVFriends: HTMLInputElement
   @ViewChild('rbPVPrivate') PVPrivate: HTMLInputElement
@@ -41,46 +39,7 @@ export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
   constructor(private privacySettingsService: PrivacyDefinitionsService) { }
 
   ngOnInit(): void {
-    this.sub = this.privacySettingsService.getPrivacySettings().subscribe({
-      next: privacySettings => {
-        this.settings = privacySettings;
-
-        //TODO: Meter isto mais direitinho
-        if (this.settings.profileVisibility == -1) {
-          this.cbPvPublic = false
-          this.cbPvFriends = false
-          this.cbPvPrivate = true
-        }
-        else if (this.settings.profileVisibility == 0) {
-          this.cbPvPublic = false
-          this.cbPvFriends = true
-          this.cbPvPrivate = false
-        }
-        else {
-          this.cbPvPublic = true
-          this.cbPvFriends = false
-          this.cbPvPrivate = false
-        }
-
-        if (this.settings.commentsPermission == -1) {
-          this.cbPcAll = false
-          this.cbPcFriends = false
-          this.cbPcPrivate = true
-        }
-        else if (this.settings.commentsPermission == 0) {
-          this.cbPcAll = false
-          this.cbPcFriends = true
-          this.cbPcPrivate = false
-        }
-        else {
-          this.cbPcAll = true
-          this.cbPcFriends = false
-          this.cbPcPrivate = false
-        }
-      },
-      error: err => this.errorMessage = err
-    });
-    console.log(this.PVPublic)
+    this.getInitialData()
   }
 
   changeVisibilitySettings(mode: number, evt: any): void {
@@ -145,13 +104,60 @@ export class PrivacyDefinitionsComponent implements OnInit, OnDestroy {
   }
 
   updatePrivacySettings(): void {
-    console.log("Entrou na função")
     console.log(this.settings.commentsPermission)
 
     this.sub = this.privacySettingsService.updatePrivacySettings(this.settings).subscribe();
+    alert("Atualizado com sucesso");
+  }
+
+  revertChanges(){
+    this.getInitialData()
   }
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
+
+
+  getInitialData(){
+    this.sub = this.privacySettingsService.getPrivacySettings().subscribe({
+      next: privacySettings => {
+        this.settings = privacySettings;
+
+        if (this.settings.profileVisibility == -1) {
+          this.cbPvPublic = false
+          this.cbPvFriends = false
+          this.cbPvPrivate = true
+        }
+        else if (this.settings.profileVisibility == 0) {
+          this.cbPvPublic = false
+          this.cbPvFriends = true
+          this.cbPvPrivate = false
+        }
+        else {
+          this.cbPvPublic = true
+          this.cbPvFriends = false
+          this.cbPvPrivate = false
+        }
+
+        if (this.settings.commentsPermission == -1) {
+          this.cbPcAll = false
+          this.cbPcFriends = false
+          this.cbPcPrivate = true
+        }
+        else if (this.settings.commentsPermission == 0) {
+          this.cbPcAll = false
+          this.cbPcFriends = true
+          this.cbPcPrivate = false
+        }
+        else {
+          this.cbPcAll = true
+          this.cbPcFriends = false
+          this.cbPcPrivate = false
+        }
+      },
+      error: err => this.errorMessage = err
+    });
+  }
+  
 }

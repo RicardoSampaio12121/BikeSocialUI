@@ -12,21 +12,14 @@
             <ul class="list-unstyled components">
                 <li>
                     <a routerLink="/contadefinitions">
-                        <img src="/18827_ricardo_sampaio/Imagens/profileConfigurationIcon.png" width="23px"
+                        <img src="/src/app/compoments/conta/privacy-definitions/images/profileConfigurationIcon.png" width="23px"
                             height="23px">
                         <label style="color: black;">Definições de conta</label>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
-                            height="23px">
-                        <label style="color: black;">Definições de perfil</label>
-                    </a>
-                </li>
-                <li>
                     <a routerLink="privacyDefinitions">
-                        <img src="/18827_ricardo_sampaio//Imagens/privacyConfigurationIcon.png" width="23px"
+                        <img src="/src/app/compoments/conta/privacy-definitions/images/profileConfigurationIcon.png" width="23px"
                             height="23px">
                         <label style="color: black;">Definições de privacidade</label>
                     </a>
@@ -208,7 +201,7 @@
 
             <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
                 <button id="btnDeleteAccount" type="button" class="btn btn-primary btn-lg btn-sm btn-block"
-                    style="height: 35px; background-color: #b51414;"> Reverter
+                    style="height: 35px; background-color: #b51414;" (click)="revertChanges()" > Reverter
                 </button>
             </div>
         </div>
