@@ -19,7 +19,7 @@ style="margin-top: 3rem;">
 
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-left border-dark">
-                <label class="tipo-prova-title">Tipo de treino</label>
+                <label class="tipo-prova-title">Tipo de prova</label>
             </div>
 
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 column-backgroud-color border-right border-dark">
@@ -56,7 +56,7 @@ style="margin-top: 3rem;">
 
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
-                <label class="provas-disponíveis">Treinos Disponíveis</label>
+                <label class="provas-disponíveis">Provas Disponíveis</label>
             </div>
         </div>
 
@@ -67,7 +67,6 @@ style="margin-top: 3rem;">
                     <th scope="col-1">Prova</th>
                     <th scope="col-1">Localidade</th>
                     <th scope="col-1">Dia</th>
-                    <th scope="col-1">Hora</th>
                     <th scope="col-1">Duração</th>
                     <th scope="col-1">Distância</th>
                     <th scope="col-1">Inscrever</th>
@@ -75,42 +74,12 @@ style="margin-top: 3rem;">
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Estrada</td>
-                    <td>Braga</td>
-                    <td>15/07</td>
-                    <td>14:00</td>
-                    <td>2 horas</td>
-                    <td>30 Km</td>
-                    <td><input type="checkbox"></td>
-
-                </tr>
-                <tr>
-                    <td>Pista</td>
-                    <td>Trofa</td>
-                    <td>20/06</td>
-                    <td>09:00</td>
-                    <td>1 horas</td>
-                    <td>23 Km</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Montanha</td>
-                    <td>Gerês</td>
-                    <td>20/10</td>
-                    <td>08:00</td>
-                    <td>4 horas</td>
-                    <td>50 Km</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>BMX</td>
-                    <td>Porto</td>
-                    <td>20/07</td>
-                    <td>09:00</td>
-                    <td>3 horas</td>
-                    <td>27 km</td>
-                    <td><input type="checkbox"></td>
+                <tr *ngFor="let race of races">
+                    <td>{{race.Description}}</td>
+                    <td>{{race.Town}}</td>
+                    <td>{{race.date}}</td>
+                    <td>{{race.EstimatedTime}}</td>
+                    <td>{{race.Distance}}</td>
                 </tr>
             </tbody>
         </table>
@@ -143,13 +112,13 @@ style="margin-top: 3rem;">
 
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled />
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled/>
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled/>
             </div>
         </div>
 
@@ -169,20 +138,21 @@ style="margin-top: 3rem;">
 
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-left border-dark">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled/>
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled/>
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 column-backgroud-color border-right border-dark">
-                <input class="escrever-localidade" type="text" required />
+                <input class="escrever-localidade" type="text" required disabled/>
             </div>
         </div>
 
         <div class="row">
-            <div
-                class="col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12 column-backgroud-color border-bottom rounded-bottom border-bottom border-left border-right border-dark">
-                <p></p>
+            <div class="col-xl-6 col-lg-9 col-md-12 col-sm-12 col-12 column-backgroud-color border-bottom rounded-bottom border-bottom border-left border-right border-dark">
+                <button id="btnRevert" type="button" class="btn btn-primary btn-lg btn-sm btn-block"
+                    style="height: 35px;" > Inscrever
+                </button>
             </div>
         </div>
 
