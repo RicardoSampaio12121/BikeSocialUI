@@ -1,7 +1,7 @@
 <div class="container py-5 px-lg-5" 
 style="margin-top: 3rem;">
 
-    <div id="content">
+    <div id="content" class="image">
 
         <div class="row">
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-5">
@@ -75,11 +75,12 @@ style="margin-top: 3rem;">
             </thead>
             <tbody>
                 <tr *ngFor="let race of races">
-                    <td>{{race.Description}}</td>
-                    <td>{{race.Town}}</td>
+                    <td>{{race.description}}</td>
+                    <td>{{race.town}}</td>
                     <td>{{race.date}}</td>
-                    <td>{{race.EstimatedTime}}</td>
-                    <td>{{race.Distance}}</td>
+                    <td>{{race.estimatedTime}}</td>
+                    <td>{{race.distance}}</td>
+                    <td><input type="checkbox" (click)="changeCheckBox(race.description)"></td>
                 </tr>
             </tbody>
         </table>
