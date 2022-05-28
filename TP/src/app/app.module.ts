@@ -36,6 +36,7 @@ import { InvitesComponentR } from './compoments/race/invites/invites.component';
     NavComponent,
     HomeComponent,
     InvitesComponent,
+    InvitesComponentR,
     AccountDefinitionsComponent,
     PrivacyDefinitionsComponent,
     HeaderComponent,

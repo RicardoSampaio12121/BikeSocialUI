@@ -110,3 +110,9 @@ body {
     background-attachment: fixed;
     background-size: cover;
 } */
+
+.image{
+    height:50em; background-size:cover; width:auto;
+    background-image:url('../../../../assets/backgroundInvRaces.jpg');
+    background-position:50% 50%;
+}
