@@ -1,8 +1,8 @@
 <div class='card'>
     <div>
         <h5 class='card-title card-body'>Amigos</h5>
-        <app-friend-list-entry *ngFor="let friend of friends"></app-friend-list-entry>
+        <app-friend-list-entry *ngFor="let friend of friends" [friend]="friend" [profileViewing]="profileViewing"></app-friend-list-entry>
         <h5 class='card-title card-body'>Pedidos de amizade</h5>
-        <app-friend-list-entry *ngFor="let friend of pendingFriends"></app-friend-list-entry>
+        <app-friend-list-entry *ngFor="let friend of pendingFriends" [friend]="friend" [profileViewing]="profileViewing"></app-friend-list-entry>
     </div>
 </div>
